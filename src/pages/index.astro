@@ -2,4 +2,58 @@
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout title="Grup de suport | Contabilidad "> Grup de Suport </Layout>
+<style lang="scss">
+  .hero {
+    height: 100vh;
+    background-color: var(--colorPrimary);
+    background: linear-gradient(180deg, rgba(44, 153, 221, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    .g-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+
+      h1 {
+        color: var(--colorText3);
+        font-size: 60px;
+        font-weight: bold;
+        padding: 30px 0;
+        text-align: center;
+      }
+    }
+
+    p {
+      padding: 10px 0;
+      text-align: justify;
+    }
+  }
+</style>
+
+<Layout title="Grup de suport | Contabilidad ">
+  <div class="hero">
+    <div class="g-wrapper">
+      <h1 class="title">¿A que pensáis que la contabilidad es un palo?</h1>
+      <img src="/assets/pluma.png" alt="pluma" width="200px" />
+    </div>
+  </div>
+
+  <div class="g-wrapper front-text">
+    <p>Pues a nosotros nos gusta y os vamos a convencer de que es una herramienta divertida y útil para vuestro proyecto.</p>
+
+    <p>
+      Hay quien la entiende como un instrumento de control y de represión de la actividad de vuestro negocio. Hay quien piensa que solamente
+      sirve para pagar impuestos…
+    </p>
+
+    <p>
+      <span class="g-color"> Os podemos ayudar a desmontar vuestra contabilidad para montarla de nuevo </span>
+      y convertirla en una pieza esencial de vuestro proyecto.
+    </p>
+
+    <p>
+      Os ayudaremos a ordenar cajones y archivadores. Bien… en realidad, no los vais a necesitar. Los podréis vaciar y convertir vuestra
+      oficina en un espacio Zen en el que solamente hará falta tener ideas, llegar a acuerdos y tomar decisiones.
+    </p>
+  </div>
+</Layout>

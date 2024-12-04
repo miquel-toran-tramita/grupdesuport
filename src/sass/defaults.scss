@@ -1,9 +1,25 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gudea';
+  src: url('/assets/fonts/Gudea-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  color: var(--colorText3);
+  color: var(--colorText);
 }
 
 ul {
@@ -34,7 +50,7 @@ h5 {
   margin: 0;
   font-size: inherit;
   font-weight: 500;
-  font-family: 'Rye', sans-serif;
+  font-family: 'Gudea', sans-serif;
 }
 
 html {
@@ -45,7 +61,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  background-color: #121212;
+  background-color: var(--colorSecondary);
   margin: 0;
 }
 

@@ -1,6 +1,7 @@
 ---
 import Menu from '@/components/essentials/menus/Menu.svelte'
 import Footer from '@/components/essentials/footers/Footer.svelte'
+import MenuBasic from '@/components/MenuBasic.svelte'
 
 export interface Props {
   title: string
@@ -20,16 +21,11 @@ const title = props.title
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&family=Rye:wght@100;300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
     <title>{title}</title>
   </head>
   <body>
+    <MenuBasic client:load />
+
     <slot />
 
     <style lang="scss" is:global>
