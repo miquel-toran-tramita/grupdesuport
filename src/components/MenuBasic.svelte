@@ -9,20 +9,20 @@
 
   const items: IMenuItem[] = [
     {
-      href: 'Equip',
-      title: 'Equip',
+      href: '',
+      title: 'Servicios',
     },
     {
-      href: 'Especialitats',
-      title: 'Especialitats',
+      href: '',
+      title: 'Tarifas',
     },
     {
-      href: 'DemanaCita',
-      title: 'Contacte',
+      href: '',
+      title: 'Nosotros',
     },
     {
-      href: 'DemanaCita',
-      title: 'Demana Cita',
+      href: '',
+      title: 'Contacto',
     },
   ]
 
@@ -33,19 +33,40 @@
 
     document.body.style.overflow = open ? 'hidden' : 'auto'
   }
+
+  let scrolled: boolean = false
+  const handleScroll = () => (scrolled = window.scrollY > 20)
 </script>
 
 <style lang="scss">
-  @import 'src/sass/mixins.scss';
+  @use 'src/sass/mixins.scss' as *;
   $menuHeight: 60px;
 
   .menu {
-    //background-color: var(--colorSecondary);
+    transition: 0.3s ease;
     height: $menuHeight;
     z-index: 7;
     position: fixed;
     width: 100%;
     top: 0;
+
+    &.scrolled {
+      background-color: var(--colorSecondary);
+      box-shadow: 0 -5px 10px 0 var(--colorPrimary);
+
+      .item {
+        color: var(--colorText) !important;
+
+        &:hover {
+          color: var(--colorPrimary) !important;
+        }
+      }
+
+      .subtitle {
+        font-size: 12px;
+        color: var(--colorPrimary) !important;
+      }
+    }
 
     .g-wrapper {
       display: flex;
@@ -58,6 +79,21 @@
         display: flex;
         align-items: center;
         gap: 10px;
+      }
+
+      .logo-texts {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .title {
+          font-size: 20px;
+        }
+        .subtitle {
+          transition: 0.3s ease;
+          font-size: 12px;
+          color: var(--colorSecondary);
+        }
       }
 
       .items {
@@ -79,7 +115,7 @@
             }
 
             &:hover {
-              color: var(--colorBrandSoft);
+              color: var(--colorText);
               transition: 0.2s ease;
             }
           }
@@ -123,11 +159,11 @@
           justify-content: center;
 
           padding: 75px;
-          color: white;
+          color: var(--colorText) !important;
           font-size: 20px;
 
-          background-color: rgba(43, 54, 41, 0.9);
-          backdrop-filter: blur(8px);
+          background-color: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(10px);
 
           &.open {
             display: flex;
@@ -161,10 +197,15 @@
   }
 </style>
 
-<div class="menu">
+<div class="menu" class:scrolled>
   <div class="g-wrapper">
     <a href="/" class="logo">
       <Svg name="logo" width="100" height="100" />
+
+      <div class="logo-texts">
+        <span class="title"> GRUP DE SUPORT SCC</span>
+        <span class="subtitle">LA COMPTABILITAT LLEUGERA</span>
+      </div>
     </a>
 
     <div class="items">
@@ -183,7 +224,7 @@
       {/each}
     </div>
 
-    <button class="burger" on:click={openMenu}>
+    <button class="burger" on:click={openMenu} aria-label="button">
       <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" fill="white" viewBox="0 -960 960 960"
         ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg
       >
@@ -206,3 +247,5 @@
     </div>
   </div>
 </div>
+
+<svelte:window on:scroll={handleScroll} />
