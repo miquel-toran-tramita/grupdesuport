@@ -1,4 +1,8 @@
 <script lang="ts">
+  import Faqs from '@/components/Faqs.svelte'
+  import Tarifas from '@/components/Tarifas.svelte'
+  import Nosotros from '@/components/Nosotros.svelte'
+
   let firstMove: boolean = false
 
   const handleScroll = () => (firstMove = window.scrollY > 120)
@@ -11,7 +15,7 @@
     position: relative;
     height: 100vh;
     background-color: var(--colorPrimary);
-    background: linear-gradient(180deg, var(--colorPrimary) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, var(--colorPrimary) 0%, rgba(255, 255, 255, 0) 100%);
 
     .g-wrapper {
       display: flex;
@@ -24,11 +28,11 @@
       h1 {
         color: var(--colorText3);
         font-size: 70px;
-        font-weight: bold;
         padding: 30px 0;
         text-align: center;
         text-wrap: balance;
-        text-shadow: 5px 5px 5px var(--colorPrimary);
+        font-family: 'Jost';
+        text-shadow: 0px 0px 5px var(--colorPrimary);
 
         @include notDesktop {
           font-size: 40px;
@@ -48,7 +52,7 @@
 
   p {
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 16px;
     text-align: justify;
   }
 
@@ -81,7 +85,7 @@
   </div>
 </div>
 
-<div class="g-mini-wrapper front-text">
+<div class="g-mini-wrapper front-text g-box">
   <p>Pues a nosotros nos gusta y os vamos a convencer de que es una herramienta divertida y útil para vuestro proyecto.</p>
 
   <p>
@@ -100,9 +104,10 @@
   </p>
 </div>
 
-<div class="g-wrapper">
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
-  /><br /><br /><br /><br /><br /><br /><br />
-</div>
+<Tarifas />
+
+<Nosotros />
+
+<Faqs />
 
 <svelte:window on:scroll={handleScroll} />

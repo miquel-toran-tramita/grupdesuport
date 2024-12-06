@@ -5,7 +5,10 @@
 .g-title {
   font-size: 40px;
   padding: 30px 0;
-  color: var(--colorText);
+  padding-top: 60px;
+  color: var(--colorPrimary);
+  font-family: var(--fontPrimary);
+  text-align: center;
 
   &.center {
     text-align: center;
@@ -58,6 +61,13 @@
   padding: 0 20px;
   margin: 0 auto;
   width: 100%;
+}
+
+.g-box {
+  border: 1px solid var(--colorAccent);
+  border-radius: var(--radius);
+  padding: 30px;
+  background-color: var(--colorNeutral);
 }
 
 /*🪄 Animations*/

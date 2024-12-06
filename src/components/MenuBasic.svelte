@@ -51,8 +51,10 @@
     top: 0;
 
     &.scrolled {
+      //border-bottom: 1px solid var(--colorPrimary);
+
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
       background-color: var(--colorSecondary);
-      box-shadow: 0 -5px 10px 0 var(--colorPrimary);
 
       .item {
         color: var(--colorText) !important;
