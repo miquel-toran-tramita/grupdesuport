@@ -1,7 +1,7 @@
 <script lang="ts">
   import Faqs from '@/components/Faqs.svelte'
-  import Tarifas from '@/components/Tarifas.svelte'
-  import Nosotros from '@/components/Nosotros.svelte'
+  import Logros from './sections/Logros.svelte'
+  import Servicios from './sections/Servicios.svelte'
 
   let firstMove: boolean = false
 
@@ -85,6 +85,10 @@
   </div>
 </div>
 
+<Logros />
+
+<Servicios />
+
 <div class="g-mini-wrapper front-text g-box">
   <p>Pues a nosotros nos gusta y os vamos a convencer de que es una herramienta divertida y útil para vuestro proyecto.</p>
 
@@ -103,10 +107,6 @@
     oficina en un espacio Zen en el que solamente hará falta tener ideas, llegar a acuerdos y tomar decisiones.
   </p>
 </div>
-
-<Tarifas />
-
-<Nosotros />
 
 <Faqs />
 
