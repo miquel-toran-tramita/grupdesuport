@@ -1,27 +1,41 @@
 <script lang="ts">
   interface ILogro {
     number: number
+    total: number
     description: string
   }
 
-  const logros: ILogro[] = [
+  let logros: ILogro[] = [
     {
-      number: 30,
+      number: 0,
+      total: 30,
       description: 'Años en el sector',
     },
     {
-      number: 30,
+      number: 0,
+      total: 300,
       description: 'Años en el sector',
     },
     {
-      number: 30,
+      number: 0,
+      total: 100,
       description: 'Años en el sector',
     },
     {
-      number: 30,
+      number: 0,
+      total: 50,
       description: 'Años en el sector',
     },
   ]
+
+  const timeMS = 10 * 100
+
+  logros.map((logro: ILogro, index: number) => {
+    setInterval(() => {
+      if (logro.number < logro.total) logro.number++
+      logros[index] = logro
+    }, timeMS / logro.total)
+  })
 </script>
 
 <style lang="scss">

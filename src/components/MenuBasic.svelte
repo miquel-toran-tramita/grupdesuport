@@ -205,7 +205,7 @@
       <Svg name="logo" width="100" height="100" />
 
       <div class="logo-texts">
-        <span class="title"> GRUP DE SUPORT SCC</span>
+        <span class="title">GRUP DE SUPORT SCC</span>
         <span class="subtitle">LA COMPTABILITAT LLEUGERA</span>
       </div>
     </a>

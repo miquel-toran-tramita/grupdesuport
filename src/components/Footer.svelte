@@ -1,61 +1,75 @@
+<script lang="ts">
+  import Svg from './Svg.svelte'
+
+  const social = [
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/grup-de-suport-scc-797501127/' },
+    { name: 'facebook', url: 'https://www.facebook.com/grupdesuport/' },
+    { name: 'twitter', url: 'https://x.com/grupdesup' },
+  ]
+</script>
+
 <style lang="scss">
-  footer {
+  .footer-container {
+    border-radius: 16px 16px 0 0;
     background-color: var(--colorPrimary);
+    margin-top: 100px;
+    padding: 20px;
 
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    .top-side {
-      height: 300px;
-      width: 100%;
-      background-color: var(--colorNeutral);
-
-      .g-wrapper {
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .bottom-side {
-      width: 100%;
-      height: 40px;
+    .logo-texts {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
 
-      .g-wrapper {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        justify-content: space-between;
-
-        .right {
-          display: flex;
-          gap: 30px;
-        }
-
-        a,
-        .left {
-          color: var(--colorText3);
-          font-size: 14px;
-        }
+      .title {
+        font-size: 20px;
+      }
+      .subtitle {
+        transition: 0.3s ease;
+        font-size: 12px;
+        color: var(--colorSecondary);
       }
     }
   }
 </style>
 
-<footer>
-  <div class="top-side">
-    <div class="g-wrapper">
-      <img src="/assets/logos.png" alt="Logos" />
-    </div>
+<div class="footer-container g-wrapper">
+  <div class="logo">
+    <a href="/" class="logo">
+      <Svg name="logo" width="100" height="100" />
+
+      <div class="logo-texts">
+        <span class="title"> GRUP DE SUPORT SCC</span>
+        <span class="subtitle">LA COMPTABILITAT LLEUGERA</span>
+      </div>
+    </a>
+
+    <div class="copyright">2020</div>
   </div>
 
-  <div class="bottom-side">
-    <div class="g-wrapper">
-      <div class="left">GRUP DE SUPORT SCC Copyright {new Date().getFullYear()}</div>
-      <div class="right">
-        <a href="/aviso-legal">Aviso legal</a>
-        <a href="/politica-de-cookies">Política de cookies</a>
-      </div>
-    </div>
+  <div class="RRSS">
+    {#each social as RRSS}
+      <a href={RRSS.url} target="_">
+        <Svg name={RRSS.name} width="35" height="35" fill="white" />
+      </a>
+    {/each}
+
+    <a href="info@grupdesuport.com">
+      <Svg name="email" width="35" height="35" fill="white" />
+      <span>info@grupdesuport.com</span>
+    </a>
+
+    <a href="info@grupdesuport.com">
+      <Svg name="phone" width="35" height="35" fill="white" />
+      <span>650 36 90 27</span>
+    </a>
   </div>
-</footer>
+</div>
