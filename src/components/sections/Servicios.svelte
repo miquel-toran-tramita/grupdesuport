@@ -58,6 +58,7 @@
       .title {
         font-size: 20px;
         font-weight: bolder;
+        margin-top: 10px;
       }
 
       .description {
@@ -100,7 +101,7 @@
   </div>
   {#each servicios as servicio}
     <div class="servicio">
-      <Svg name={servicio.icon} fill="var(--colorPrimary)" />
+      <Svg name={servicio.icon} fill="var(--colorPrimary)" height="30" width="30" />
       <div class="title">{servicio.title}</div>
       <div class="description">{servicio.description}</div>
     </div>
