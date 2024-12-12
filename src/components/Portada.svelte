@@ -49,6 +49,8 @@
     color: var(--colorPrimary);
     font-size: 16px;
     background-color: white;
+    width: 90%;
+    margin: auto;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -105,32 +107,27 @@
 
 <div class="hero">
   <div class="g-wrapper">
-    <h1 class="title">¿A que pensáis que la contabilidad es un palo?</h1>
+    <!--
+      Eres increíble llevando tu negocio, pero un desastre con las cuentas. Nosotros no.
+      Después de todo lo que has pasado, no metas la pata con la contabilidad.
+      A nadie le gusta la contabilidad (a nosotros si, te explicamos el porqué)
+      Si no quieres contar, cuenta con nostros. 
+      No te distraigas con la contabilidad. Delega. Olvídate.
+      Tu negocio es tu pasión; la contabilidad es la nuestra.
+      Haz lo que amas, nosotros nos encargamos de los números.
+      ¿Qué sientes al enfrentarte a la contabilidad?
+    -->
+    <h1 class="title">¿Qué sientes al enfrentarte a la contabilidad?</h1>
     <img id="pluma" class:firstMove src="/assets/pluma.png" alt="pluma" width="240px" />
   </div>
 </div>
 
-<div class="front-text">
+<div class="front-text g-box">
   <div class="g-wrapper">
+    <h2 class="title"></h2>
     <div class="text">
-      <h2>Pues a nosotros nos gusta y os vamos a convencer de que es una herramienta divertida y útil para vuestro proyecto.</h2>
+      <p>Si, llevamos más de 30 años dedicandonos a ello y unos pocos más de forma totalmente online.</p>
       <p></p>
-
-      <p>Hay quien la entiende como un instrumento de control y de represión de la actividad de vuestro negocio.</p>
-
-      <p>Hay quien piensa que solamente sirve para pagar impuestos…</p>
-
-      <p>
-        <span class="g-color"> Os podemos ayudar a desmontar vuestra contabilidad para montarla de nuevo </span>
-        y convertirla en una pieza esencial de vuestro proyecto.
-      </p>
-
-      <p>Os ayudaremos a ordenar cajones y archivadores.</p>
-
-      <p>
-        Bien… en realidad, no los vais a necesitar. Los podréis vaciar y convertir vuestra oficina en un espacio Zen en el que solamente
-        hará falta tener ideas, llegar a acuerdos y tomar decisiones.
-      </p>
     </div>
   </div>
 </div>
