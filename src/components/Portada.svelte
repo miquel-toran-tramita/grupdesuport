@@ -4,10 +4,20 @@
   import Faqs from '@/components/Faqs.svelte'
   import Logros from './sections/Logros.svelte'
   import Servicios from './sections/Servicios.svelte'
+  import { onMount } from 'svelte'
 
-  let firstMove: boolean = false
+  let move: string = 'animation-stand-by'
 
-  const handleScroll = () => (firstMove = window.scrollY > 120)
+  const handleScroll = () => {
+    const vh100 = window.innerHeight
+
+    if (window.scrollY < vh100) move = 'animation-stand-by'
+    if (window.scrollY > vh100 / 5) move = 'animation-one'
+    if (window.scrollY > vh100 / 1.6) move = 'animation-two'
+    if (window.scrollY > vh100) move = 'animation-three'
+    if (window.scrollY > vh100 * 1.8) move = 'animation-four'
+    if (window.scrollY > vh100 * 2.4) move = 'animation-five'
+  }
 </script>
 
 <style lang="scss">
@@ -33,6 +43,7 @@
         text-align: center;
         text-wrap: balance;
         font-family: 'Jost';
+
         @include notDesktop {
           font-size: 40px;
         }
@@ -42,6 +53,42 @@
         color: var(--colorText3);
         font-size: 25px;
         padding-bottom: 30px;
+      }
+    }
+
+    #pluma {
+      transition: 1s ease;
+      position: absolute;
+      bottom: 15vh;
+      z-index: 9;
+
+      &.animation-stand-by {
+        //animation: standBy 3s ease-in-out infinite; /* Animación */
+      }
+
+      &.animation-one {
+        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+        transform: translateY(25vh) translateX(150%) rotateZ(-20deg);
+      }
+
+      &.animation-two {
+        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+        transform: translateY(70vh) translateX(180%) rotateZ(-40deg);
+      }
+
+      &.animation-three {
+        transition: 5s cubic-bezier(0.5, 0.4, 0.6, 1);
+        transform: translateY(140vh) translateX(-200%) rotateZ(10deg);
+      }
+
+      &.animation-four {
+        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+        transform: translateY(190vh) translateX(90%) rotateZ(-20deg);
+      }
+
+      &.animation-five {
+        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+        transform: translateY(310vh) translateX(0%) rotateZ(0deg);
       }
     }
   }
@@ -75,39 +122,21 @@
     }
   }
 
-  #pluma {
-    transition: 1s ease;
-    animation: float 4s ease-in-out infinite; /* Animación */
-
-    &.firstMove {
-      animation: firstMove 1s ease-in-out forwards; /* Animación */
-    }
-  }
-
   /*p {
     padding: 10px 0;
     font-size: 16px;
     text-align: justify;
   }*/
 
-  @keyframes float {
+  @keyframes standBy {
     0% {
       transform: translateY(0); /* Posición inicial */
     }
     50% {
-      transform: translateY(-10px); /* Subir */
+      transform: translateY(-20px); /* Subir */
     }
     100% {
       transform: translateY(0); /* Volver a la posición inicial */
-    }
-  }
-
-  @keyframes firstMove {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(300px);
     }
   }
 </style>
@@ -125,7 +154,7 @@
       ¿Qué sientes al enfrentarte a la contabilidad?
     -->
     <h1 class="title">Si tu contabilidad no es ligera, algo estás haciendo mal</h1>
-    <img id="pluma" class:firstMove src="/assets/pluma.png" alt="pluma" width="240px" />
+    <img id="pluma" class={move} src="/assets/pluma.png" alt="pluma" width="240px" />
   </div>
 </div>
 
