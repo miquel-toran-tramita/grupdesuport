@@ -47,6 +47,7 @@
   }
 
   .front-text {
+    position: relative;
     color: var(--colorPrimary);
     font-size: 16px;
     background-color: white;
@@ -63,7 +64,13 @@
       }
 
       p {
-        padding: 10px 0;
+        padding: 8px 0;
+      }
+
+      .last-p {
+        position: absolute;
+        color: var(--colorText2);
+        bottom: 30px;
       }
     }
   }
@@ -125,22 +132,24 @@
 <div class="g-wrapper">
   <div class="front-text g-box">
     <div class="text">
-      <p>Debería ser un indicador de salud, que te simplifique la toma de decisiones.</p>
-      <p>Que te deje dormir por las noches sabiendo que todas las cuestiones legales están cubiertas.</p>
+      <p>Debería ser un <b>indicador de salud</b>, que te simplifique la toma de decisiones.</p>
+      <p>Que te deje dormir por las noches sabiendo que las cuestiones legales están cubiertas.</p>
 
       <p>Que no te haga perder el tiempo, ni perder los papeles...</p>
 
       <p>Bueno, eso último ya no te volverá a pasar nunca más.</p>
+      <br />
       <p>
-        Somos una gestoría contable online, que os ayudará a desmontar vuestra contabilidad para montarla de nuevo, sin trucos ni chapuzas.
+        <span class="g-color">Somos una gestoría contable online</span>, que os ayudará a desmontar vuestra contabilidad para montarla de
+        nuevo, sin trucos ni chapuzas.
       </p>
 
       <p>
         Podreis vaciar la oficina de archivadores, papeles innecesarios y convertirla en un espacio Zen en el que solamente hará falta tener
         ideas y llegar a acuerdos.
       </p>
-      <br />
-      <p>Si esto resuena contigo, no eres la única persona, sigue leyendo.</p>
+
+      <p class="last-p">Si esto resuena contigo, no eres la única persona, <b>sigue leyendo.</b></p>
     </div>
   </div>
 </div>

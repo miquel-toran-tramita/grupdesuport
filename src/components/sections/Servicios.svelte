@@ -56,7 +56,6 @@
     }
 
     .servicio {
-      border-radius: 16px;
       background-color: white;
       padding: 20px;
       display: flex;
@@ -103,11 +102,11 @@
 </style>
 
 <div class="servicios-container g-wrapper">
-  <div class="main">
+  <div class="main g-box">
     <h2>¿Qué hacemos exactamente?</h2>
   </div>
   {#each servicios as servicio}
-    <div class="servicio">
+    <div class="servicio g-box">
       <Svg name={servicio.icon} fill="var(--colorPrimary)" height="30" width="30" />
       <div class="title">{servicio.title}</div>
       <div class="description">{servicio.description}</div>
