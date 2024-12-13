@@ -11,7 +11,7 @@
 <style lang="scss">
   .footer-container {
     border-radius: 16px 16px 0 0;
-    background-color: var(--colorPrimary);
+    background-color: var(--colorSecondary);
     margin-top: 100px;
     padding: 20px;
 

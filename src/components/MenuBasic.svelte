@@ -40,7 +40,7 @@
 
 <style lang="scss">
   @use 'src/sass/mixins.scss' as *;
-  $menuHeight: 60px;
+  $menuHeight: 70px;
 
   .menu {
     transition: 0.3s ease;
@@ -48,12 +48,19 @@
     z-index: 7;
     position: fixed;
     width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
     top: 0;
+
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
 
     &.scrolled {
       //border-bottom: 1px solid var(--colorPrimary);
 
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: rgba(65, 109, 252, 0.1) 0 15px 10px -5px;
+
       background-color: var(--colorSecondary);
 
       .item {
@@ -70,7 +77,7 @@
       }
     }
 
-    .g-wrapper {
+    .menu-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -199,8 +206,8 @@
   }
 </style>
 
-<div class="menu" class:scrolled>
-  <div class="g-wrapper">
+<div class="menu g-wrapper" class:scrolled>
+  <div class="menu-content">
     <a href="/" class="logo">
       <Svg name="logo" width="100" height="100" />
 

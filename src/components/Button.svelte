@@ -68,8 +68,15 @@
       transform: rotate(-90deg);
     }
     &.btn-main {
+      transition: 0.3s ease;
       color: var(--colorText3);
       background: linear-gradient(60deg, #00bfff, rgb(225, 0, 255)); /* Degradado de púrpura a azul */
+      font-weight: bold;
+
+      &:hover {
+        filter: brightness(1.1);
+        box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+      }
     }
 
     &.btn-secondary {

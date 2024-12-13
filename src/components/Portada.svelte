@@ -1,6 +1,6 @@
 <script lang="ts">
   import Tarifas from './Tarifas.svelte'
-  import Reviso from './sections/Reviso.svelte'
+  import Testimonials from './sections/Testimonials.svelte'
   import Faqs from '@/components/Faqs.svelte'
   import Logros from './sections/Logros.svelte'
   import Servicios from './sections/Servicios.svelte'
@@ -52,9 +52,6 @@
     background-color: white;
     margin: auto;
     height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     .text {
       max-width: 700px;
@@ -125,23 +122,29 @@
 
 <div class="g-wrapper">
   <div class="front-text g-box">
-    <h2 class="g-title">Esto es un titulo de ejemplo</h2>
     <div class="text">
-      <p>Si, llevamos más de 30 años dedicandonos a ello y unos pocos más de forma totalmente online.</p>
-      <p></p>
+      <p>Debería ser un indicador de salud, que te simplifique la toma de decisiones.</p>
+      <p>Que te deje dormir por las noches sabiendo que todas las cuestiones legales están cubiertas.</p>
+
+      <p>Que no te haga perder el tiempo, ni perder los papeles...</p>
+
+      <p>Bueno, eso último ya no te volverá a pasar nunca más.</p>
+      <p>
+        Somos una gestoría contable online, que os ayudará a desmontar vuestra contabilidad para montarla de nuevo, sin trucos ni chapuzas.
+      </p>
+
+      <p>
+        Podrás vaciar la oficina de archivadores y papeles innecesarios y convertirla en un espacio Zen en el que solamente hará falta tener
+        ideas, llegar a acuerdos y tomar decisiones.
+      </p>
+
+      <p>Si esto resuena contigo, no eres la única persona, sigue leyendo.</p>
     </div>
   </div>
-
-  <Servicios />
 </div>
+<Testimonials />
 
-<Logros />
-
-Tarifas "Si no poneis el precio seguro que es muy caro" Al revés, ¿que sentido tiene contratar una gestoría contable que te rompa la
-cuentas? En nuestra primera reunión estudiaremos tu situación financiera particular y buscaremos el bien común.
-
-<Reviso />
-
-<Faqs />
+<Servicios />
+<Tarifas />
 
 <svelte:window on:scroll={handleScroll} />

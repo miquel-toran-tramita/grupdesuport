@@ -102,7 +102,7 @@
   }
 </style>
 
-<div class="servicios-container">
+<div class="servicios-container g-wrapper">
   <div class="main">
     <h2>¿Qué hacemos exactamente?</h2>
   </div>
