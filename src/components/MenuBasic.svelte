@@ -34,6 +34,20 @@
     document.body.style.overflow = open ? 'hidden' : 'auto'
   }
 
+  var prevScrollpos = window.scrollY
+
+  let HTMLMenu: HTMLElement
+
+  window.onscroll = function () {
+    var currentScrollPos = window.scrollY
+    if (prevScrollpos > currentScrollPos) {
+      HTMLMenu.style.top = '0'
+    } else {
+      HTMLMenu.style.top = '-70px'
+    }
+    prevScrollpos = currentScrollPos
+  }
+
   let scrolled: boolean = false
   const handleScroll = () => (scrolled = window.scrollY > 20)
 </script>
@@ -206,7 +220,7 @@
   }
 </style>
 
-<div class="menu g-wrapper" class:scrolled>
+<div class="menu g-wrapper" class:scrolled bind:this={HTMLMenu}>
   <div class="menu-content">
     <a href="/" class="logo">
       <Svg name="logo" width="100" height="100" />

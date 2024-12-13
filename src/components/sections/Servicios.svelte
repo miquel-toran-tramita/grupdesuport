@@ -82,6 +82,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      font-family: var(--fontPrimary);
+      font-weight: 300;
 
       .more {
         border: 1px solid var(--colorText3);
