@@ -1,4 +1,18 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
+
+  let HTMLInfiniteLoop: HTMLElement
+  let x: number = 0
+
+  const animate = () => {
+    HTMLInfiniteLoop.style.transform = `translateX(${x}px)`
+    //x += 0.5
+    requestAnimationFrame(animate)
+  }
+
+  onMount(() => {
+    requestAnimationFrame(animate)
+  })
 </script>
 
 <style lang="scss">
@@ -12,6 +26,6 @@
   }
 </style>
 
-<div class="infinite-loop">
+<div class="infinite-loop" bind:this={HTMLInfiniteLoop}>
   <slot></slot>
 </div>

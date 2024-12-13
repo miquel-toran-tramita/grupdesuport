@@ -22,53 +22,33 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .logo-texts {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-
-      .title {
-        font-size: 20px;
-      }
-      .subtitle {
-        transition: 0.3s ease;
-        font-size: 12px;
-        color: var(--colorSecondary);
-      }
+      font-size: 14px;
     }
   }
 </style>
 
 <div class="footer-container g-wrapper">
-  <div class="logo">
-    <a href="/" class="logo">
-      <Svg name="logo" width="100" height="100" />
+  <span class="logo"> GRUP DE SUPORT SCC {new Date().getFullYear()}</span>
 
-      <div class="logo-texts">
-        <span class="title"> GRUP DE SUPORT SCC</span>
-        <span class="subtitle">LA COMPTABILITAT LLEUGERA</span>
-      </div>
-    </a>
-
-    <div class="copyright">2020</div>
+  <div class="footer-links">
+    <a href="/aviso-legal">Aviso legal</a>
+    <a href="/politica-de-privacidad">Política de privacidad</a>
   </div>
 
   <div class="RRSS">
     {#each social as RRSS}
-      <a href={RRSS.url} target="_">
-        <Svg name={RRSS.name} width="35" height="35" fill="white" />
+      <a href={RRSS.url} target="blank_">
+        <Svg name={RRSS.name} width="25" height="25" fill="var(--colorText2)" />
       </a>
     {/each}
 
     <a href="info@grupdesuport.com">
-      <Svg name="email" width="35" height="35" fill="white" />
+      <Svg name="email" width="25" height="25" fill="var(--colorText2)" />
       <span>info@grupdesuport.com</span>
     </a>
 
     <a href="info@grupdesuport.com">
-      <Svg name="phone" width="35" height="35" fill="white" />
+      <Svg name="phone" width="25" height="25" fill="var(--colorText2)" />
       <span>650 36 90 27</span>
     </a>
   </div>

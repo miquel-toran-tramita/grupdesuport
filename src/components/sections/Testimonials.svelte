@@ -1,5 +1,6 @@
 <script lang="ts">
   import InfiniteLoop from '@/components/InfiniteLoop.svelte'
+  import SliderX from '../SliderX.svelte'
 
   const testimonials = [
     {
@@ -38,18 +39,19 @@
 <style lang="scss">
   .testimonials {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 70vh;
 
     .testimonial {
+      height: 100%;
       padding: 20px;
+      max-width: 300px;
 
       .title {
         color: var(--colorPrimary);
         font-size: 25px;
-      }
-
-      .opinion {
-        text-align: justify;
       }
 
       .person {
@@ -73,7 +75,7 @@
 </style>
 
 <div class="testimonials">
-  <InfiniteLoop>
+  <SliderX>
     {#each testimonials as testimonial}
       <div class="testimonial">
         <h3 class="title">{testimonial.title}</h3>
@@ -87,5 +89,5 @@
         </div>
       </div>
     {/each}
-  </InfiniteLoop>
+  </SliderX>
 </div>

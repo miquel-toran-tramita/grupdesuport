@@ -52,6 +52,8 @@
     background-color: white;
     margin: auto;
     height: 60vh;
+    margin-bottom: 50px;
+    padding: 50px;
 
     .text {
       max-width: 700px;
@@ -134,10 +136,10 @@
       </p>
 
       <p>
-        Podrás vaciar la oficina de archivadores y papeles innecesarios y convertirla en un espacio Zen en el que solamente hará falta tener
-        ideas, llegar a acuerdos y tomar decisiones.
+        Podreis vaciar la oficina de archivadores, papeles innecesarios y convertirla en un espacio Zen en el que solamente hará falta tener
+        ideas y llegar a acuerdos.
       </p>
-
+      <br />
       <p>Si esto resuena contigo, no eres la única persona, sigue leyendo.</p>
     </div>
   </div>
