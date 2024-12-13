@@ -9,27 +9,27 @@
 
   const servicios: IServicio[] = [
     {
-      icon: 'handshake',
-      title: 'Con confianza',
+      icon: 'tick',
+      title: 'Facturación y pagos',
       description:
         'No queremos ocultar nada, porque nos gusta pensar que empezamos a vivir en una nueva época en la que ya nadie podrá esconder sus tropelías.',
     },
-    { icon: 'gear', title: 'Con innovación', description: 'Tendréis suficiente con un ordenador. [...]' },
+    { icon: 'gear', title: 'Configuración y Asesoría Tecnológica', description: 'Tendréis suficiente con un ordenador. [...]' },
     {
-      icon: 'leaf',
-      title: 'Con sostenibilidad',
+      icon: 'handshake',
+      title: 'Conciliaciones y Registros Contables',
       description:
         'No solamente ecológica. Queremos y podemos medir el impacto de nuestra actividad y también la de vuestro negocio si así nos lo solicitáis.',
     },
     {
-      icon: 'diversity',
-      title: 'Con solidaridad',
+      icon: 'balance',
+      title: 'Presentaciones y Obligaciones Legales',
       description:
         'Porqué creemos que los proyectos colectivos o individuales de las personas emprendedoras pueden aportar tanto a la sociedad como lo hacen los subsidios del Estado.',
     },
     {
-      icon: 'balance',
-      title: 'Con justicia',
+      icon: 'eye',
+      title: 'Informes y Estados Financieros',
       description:
         'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos y una provechosa colaboración con nuestros clientes.',
     },
@@ -39,13 +39,21 @@
 <style lang="scss">
   .servicios-container {
     width: 100%;
-    padding: 25px;
     margin-top: 75px;
     margin-bottom: 75px;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
+
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-size: 50px;
+      color: white;
+    }
 
     .servicio {
       border-radius: 16px;
@@ -94,10 +102,9 @@
   }
 </style>
 
-<div class="servicios-container g-wrapper">
+<div class="servicios-container">
   <div class="main">
-    <span>Explora nuestros servicios</span>
-    <button class="more">Ver más...</button>
+    <h2>¿Qué hacemos exactamente?</h2>
   </div>
   {#each servicios as servicio}
     <div class="servicio">

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Tarifas from './Tarifas.svelte'
   import Reviso from './sections/Reviso.svelte'
   import Faqs from '@/components/Faqs.svelte'
   import Logros from './sections/Logros.svelte'
@@ -49,10 +50,10 @@
     color: var(--colorPrimary);
     font-size: 16px;
     background-color: white;
-    width: 90%;
     margin: auto;
     height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
 
     .text {
@@ -117,24 +118,27 @@
       Haz lo que amas, nosotros nos encargamos de los números.
       ¿Qué sientes al enfrentarte a la contabilidad?
     -->
-    <h1 class="title">¿Qué sientes al enfrentarte a la contabilidad?</h1>
+    <h1 class="title">Si tu contabilidad no es ligera, algo estás haciendo mal</h1>
     <img id="pluma" class:firstMove src="/assets/pluma.png" alt="pluma" width="240px" />
   </div>
 </div>
 
-<div class="front-text g-box">
-  <div class="g-wrapper">
-    <h2 class="title"></h2>
+<div class="g-wrapper">
+  <div class="front-text g-box">
+    <h2 class="g-title">Esto es un titulo de ejemplo</h2>
     <div class="text">
       <p>Si, llevamos más de 30 años dedicandonos a ello y unos pocos más de forma totalmente online.</p>
       <p></p>
     </div>
   </div>
+
+  <Servicios />
 </div>
 
-<Servicios />
-
 <Logros />
+
+Tarifas "Si no poneis el precio seguro que es muy caro" Al revés, ¿que sentido tiene contratar una gestoría contable que te rompa la
+cuentas? En nuestra primera reunión estudiaremos tu situación financiera particular y buscaremos el bien común.
 
 <Reviso />
 
