@@ -1,5 +1,9 @@
 <script lang="ts">
-  import Button from './Button.svelte'
+  import Modal from '@/components/Modal.svelte'
+  import Button from '@/components/Button.svelte'
+  import ContactForm from '@/components/ContactForm.svelte'
+
+  export let closed: boolean = true
 </script>
 
 <style lang="scss">
@@ -15,6 +19,10 @@
         padding: 20px 0;
       }
     }
+  }
+
+  .modal-content {
+    padding: 20px;
   }
 </style>
 
@@ -33,6 +41,14 @@
       <p>Si quieres empezar hoy mismo, <b>haz click aquí abajo.</b></p>
     </div>
 
-    <Button>Concertar una cita</Button>
+    <Button click={() => (closed = false)}>Concertar una cita</Button>
   </div>
 </div>
+
+<Modal bind:closed>
+  <div slot="modal-header">Formulario de contacto</div>
+
+  <div slot="modal-content" class="modal-content">
+    <ContactForm />
+  </div>
+</Modal>
