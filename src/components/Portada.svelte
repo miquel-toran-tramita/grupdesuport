@@ -88,7 +88,7 @@
 
       &.animation-five {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(310vh) translateX(0%) rotateZ(0deg);
+        transform: translateY(290vh) translateX(0%) rotateZ(0deg);
       }
     }
   }

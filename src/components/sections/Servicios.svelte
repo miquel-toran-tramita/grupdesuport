@@ -9,29 +9,25 @@
 
   const servicios: IServicio[] = [
     {
-      icon: 'tick',
+      icon: 'money',
       title: 'Facturación y pagos',
-      description:
-        'No queremos ocultar nada, porque nos gusta pensar que empezamos a vivir en una nueva época en la que ya nadie podrá esconder sus tropelías.',
+      description: '',
     },
-    { icon: 'gear', title: 'Configuración y Asesoría Tecnológica', description: 'Tendréis suficiente con un ordenador. [...]' },
+    { icon: 'gear', title: 'Configuración y Asesoría Tecnológica', description: '' },
     {
       icon: 'handshake',
       title: 'Conciliaciones y Registros Contables',
-      description:
-        'No solamente ecológica. Queremos y podemos medir el impacto de nuestra actividad y también la de vuestro negocio si así nos lo solicitáis.',
+      description: '',
     },
     {
       icon: 'balance',
       title: 'Presentaciones y Obligaciones Legales',
-      description:
-        'Porqué creemos que los proyectos colectivos o individuales de las personas emprendedoras pueden aportar tanto a la sociedad como lo hacen los subsidios del Estado.',
+      description: '',
     },
     {
-      icon: 'eye',
+      icon: 'receipt',
       title: 'Informes y Estados Financieros',
-      description:
-        'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos y una provechosa colaboración con nuestros clientes.',
+      description: '',
     },
   ]
 </script>
@@ -59,13 +55,15 @@
       background-color: white;
       padding: 20px;
       display: flex;
+      min-height: 230px;
       flex-direction: column;
-      gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0px;
 
       .title {
-        font-size: 20px;
-        font-weight: bolder;
-        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
       }
 
       .description {
@@ -109,9 +107,9 @@
   </div>
   {#each servicios as servicio}
     <div class="servicio g-box">
-      <Svg name={servicio.icon} fill="var(--colorPrimary)" height="30" width="30" />
+      <Svg name={servicio.icon} fill="var(--colorPrimary)" height="60" width="60" />
       <div class="title">{servicio.title}</div>
-      <div class="description">{servicio.description}</div>
+      <!--<div class="description">{servicio.description}</div>-->
     </div>
   {/each}
 </div>
