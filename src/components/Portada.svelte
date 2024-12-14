@@ -166,11 +166,11 @@
 
       <p>Que no te haga perder el tiempo, ni perder los papeles...</p>
 
-      <p>Bueno, eso último ya no te volverá a pasar nunca más.</p>
+      <br />
+      <p>Bueno, eso último <span class="g-color">ya no te volverá a pasar nunca más.</span></p>
       <br />
       <p>
-        <span class="g-color">Somos una gestoría contable online</span>, que os ayudará a desmontar vuestra contabilidad para montarla de
-        nuevo, sin trucos ni chapuzas.
+        Somos una gestoría contable online, que os ayudará a desmontar vuestra contabilidad para montarla de nuevo, sin trucos ni chapuzas.
       </p>
 
       <p>
