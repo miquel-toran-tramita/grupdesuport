@@ -1,10 +1,12 @@
 <script lang="ts">
   import Tarifas from './Tarifas.svelte'
   import Testimonials from './sections/Testimonials.svelte'
-  import Faqs from '@/components/Faqs.svelte'
-  import Logros from './sections/Logros.svelte'
   import Servicios from './sections/Servicios.svelte'
-  import { onMount } from 'svelte'
+  import { useTranslations, languageList } from '@/i18n/ui'
+
+  export let lang: string
+
+  const t = useTranslations(lang as keyof typeof languageList)
 
   let move: string = 'animation-stand-by'
 
@@ -13,7 +15,7 @@
 
     if (window.scrollY < vh100) move = 'animation-stand-by'
     if (window.scrollY > vh100 / 5) move = 'animation-one'
-    if (window.scrollY > vh100 / 1.6) move = 'animation-two'
+    if (window.scrollY > vh100 / 1.2) move = 'animation-two'
     if (window.scrollY > vh100) move = 'animation-three'
     if (window.scrollY > vh100 * 1.8) move = 'animation-four'
     if (window.scrollY > vh100 * 2.4) move = 'animation-five'
@@ -59,36 +61,38 @@
     #pluma {
       transition: 1s ease;
       position: absolute;
-      bottom: 15vh;
-      z-index: 9;
+      top: 70vh;
+      z-index: 6;
 
       &.animation-stand-by {
-        //animation: standBy 3s ease-in-out infinite; /* Animación */
+        animation: standBy 3s ease-in-out infinite; /* Animación */
       }
 
-      &.animation-one {
-        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(25vh) translateX(150%) rotateZ(-20deg);
-      }
+      @include desktop {
+        &.animation-one {
+          transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(25vh) translateX(150%) rotateZ(-20deg);
+        }
 
-      &.animation-two {
-        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(70vh) translateX(180%) rotateZ(-40deg);
-      }
+        &.animation-two {
+          transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(70vh) translateX(180%) rotateZ(-40deg);
+        }
 
-      &.animation-three {
-        transition: 5s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(140vh) translateX(-200%) rotateZ(10deg);
-      }
+        &.animation-three {
+          transition: 5s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(140vh) translateX(-200%) rotateZ(10deg);
+        }
 
-      &.animation-four {
-        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(190vh) translateX(90%) rotateZ(-20deg);
-      }
+        &.animation-four {
+          transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(190vh) translateX(90%) rotateZ(-20deg);
+        }
 
-      &.animation-five {
-        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(290vh) translateX(0%) rotateZ(0deg);
+        &.animation-five {
+          transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(295vh) translateX(0%) rotateZ(0deg);
+        }
       }
     }
   }
@@ -99,9 +103,13 @@
     font-size: 16px;
     background-color: white;
     margin: auto;
-    height: 60vh;
+    height: 100%;
     margin-bottom: 50px;
     padding: 50px;
+
+    @include notDesktop {
+      padding: 30px;
+    }
 
     .text {
       max-width: 700px;
@@ -115,9 +123,8 @@
       }
 
       .last-p {
-        position: absolute;
+        margin-top: 50px;
         color: var(--colorText2);
-        bottom: 30px;
       }
     }
   }
@@ -130,13 +137,13 @@
 
   @keyframes standBy {
     0% {
-      transform: translateY(0); /* Posición inicial */
+      margin-top: 0;
     }
     50% {
-      transform: translateY(-20px); /* Subir */
+      margin-top: -20px;
     }
     100% {
-      transform: translateY(0); /* Volver a la posición inicial */
+      margin-top: 0;
     }
   }
 </style>
@@ -153,7 +160,7 @@
       Haz lo que amas, nosotros nos encargamos de los números.
       ¿Qué sientes al enfrentarte a la contabilidad?
     -->
-    <h1 class="title">Si tu contabilidad no es ligera, algo estás haciendo mal</h1>
+    <h1 class="title">{t('pageTitle')}</h1>
     <img id="pluma" class={move} src="/assets/pluma.png" alt="pluma" width="240px" />
   </div>
 </div>

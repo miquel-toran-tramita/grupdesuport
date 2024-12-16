@@ -70,7 +70,8 @@
     &.btn-main {
       transition: 0.3s ease;
       color: var(--colorText3);
-      background: linear-gradient(60deg, var(--colorPrimary), rgb(143, 0, 161)); /* Degradado de púrpura a azul */
+      background-color: var(--colorPrimary);
+      //background: linear-gradient(60deg, var(--colorPrimary), rgb(143, 0, 161)); /* Degradado de púrpura a azul */
       font-weight: bold;
 
       &:hover {

@@ -24,6 +24,7 @@
   ]
 
   let open: boolean = false
+  export let lang: string
 
   const openMenu = () => {
     open = !open
@@ -33,20 +34,16 @@
 
   var prevScrollpos = window.scrollY
 
-  let HTMLMenu: HTMLElement
-
-  window.onscroll = function () {
-    var currentScrollPos = window.scrollY
-    if (prevScrollpos > currentScrollPos) {
-      HTMLMenu.style.top = '0'
-    } else {
-      HTMLMenu.style.top = '-70px'
-    }
-    prevScrollpos = currentScrollPos
-  }
-
   let scrolled: boolean = false
-  const handleScroll = () => (scrolled = window.scrollY > 20)
+  let hidden: boolean = false
+
+  const handleScroll = () => {
+    scrolled = window.scrollY > 20
+
+    hidden = prevScrollpos > window.scrollY
+
+    prevScrollpos = window.scrollY
+  }
 </script>
 
 <style lang="scss">
@@ -69,9 +66,7 @@
 
     &.scrolled {
       //border-bottom: 1px solid var(--colorPrimary);
-
       box-shadow: rgba(65, 109, 252, 0.1) 0 15px 10px -5px;
-
       background-color: var(--colorSecondary);
 
       .item {
@@ -87,9 +82,19 @@
         border: 1px solid var(--colorPrimary);
       }
 
+      :global(svg) {
+        fill: var(--colorText);
+      }
+
       .subtitle {
         font-size: 12px;
         color: var(--colorPrimary) !important;
+      }
+    }
+
+    &.hidden {
+      @include desktop {
+        top: calc($menuHeight * -1);
       }
     }
 
@@ -151,7 +156,6 @@
             overflow: hidden;
             flex-direction: column;
             gap: 10px;
-            margin-top: 10px;
             padding: 20px;
             background-color: var(--colorBackground);
             border: 1px solid var(--colorBorder);
@@ -222,7 +226,7 @@
   }
 </style>
 
-<div class="menu g-wrapper" class:scrolled bind:this={HTMLMenu}>
+<div class="menu g-wrapper" class:scrolled class:hidden class:open>
   <div class="menu-content">
     <a href="/" class="logo">
       <Svg name="logo" width="100" height="100" />
@@ -248,7 +252,7 @@
         </div>
       {/each}
 
-      <LanguageSelector />
+      <LanguageSelector {lang} />
     </div>
 
     <button class="burger" on:click={openMenu} aria-label="button">
@@ -258,10 +262,6 @@
     </button>
 
     <div class="items-mobile" class:open>
-      <button on:click={openMenu}>
-        <Svg name="plus" height="40" width="40" fill="white" className="close" />
-      </button>
-
       {#each items as item}
         <a class="item" href="https://nomadpsicologia.com/#{item.href}" title={item.title} on:click={openMenu}>{item.title}</a>
 

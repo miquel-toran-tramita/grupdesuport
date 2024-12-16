@@ -2,7 +2,9 @@
 import Menu from '@/components/essentials/menus/Menu.svelte'
 import Footer from '@/components/Footer.svelte'
 import MenuBasic from '@/components/MenuBasic.svelte'
+import { defaultLang } from '@/i18n/ui'
 
+const lang = Astro.currentLocale || defaultLang
 export interface Props {
   title: string
 }
@@ -12,7 +14,7 @@ const title = props.title
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -28,7 +30,7 @@ const title = props.title
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <MenuBasic client:only />
+    <MenuBasic {lang} client:only />
 
     <slot />
 
