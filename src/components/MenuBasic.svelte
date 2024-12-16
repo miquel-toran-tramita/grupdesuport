@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Svg from './Svg.svelte'
+  import Svg from '@/components/Svg.svelte'
+  import LanguageSelector from '@/components/LanguageSelector.svelte'
 
   interface IMenuItem {
     href: string
@@ -11,10 +12,6 @@
     {
       href: '',
       title: 'Servicios',
-    },
-    {
-      href: '',
-      title: 'Tarifas',
     },
     {
       href: '',
@@ -83,6 +80,11 @@
         &:hover {
           color: var(--colorPrimary) !important;
         }
+      }
+
+      :global(.language-selector .active) {
+        color: var(--colorPrimary);
+        border: 1px solid var(--colorPrimary);
       }
 
       .subtitle {
@@ -245,6 +247,8 @@
           {/if}
         </div>
       {/each}
+
+      <LanguageSelector />
     </div>
 
     <button class="burger" on:click={openMenu} aria-label="button">
