@@ -32,15 +32,15 @@
     document.body.style.overflow = open ? 'hidden' : 'auto'
   }
 
-  var prevScrollpos = window.scrollY
+  let prevScrollpos: number = 0
 
   let scrolled: boolean = false
   let hidden: boolean = false
 
   const handleScroll = () => {
-    scrolled = window.scrollY > 20
+    scrolled = window.scrollY > 50
 
-    hidden = prevScrollpos > window.scrollY
+    hidden = prevScrollpos > window.scrollY && scrolled
 
     prevScrollpos = window.scrollY
   }

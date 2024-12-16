@@ -37,11 +37,11 @@
       justify-content: center;
       flex-direction: column;
       gap: 30px;
-      height: 100%;
+      height: 100vh;
 
-      h1 {
+      .title {
         color: var(--colorText3);
-        font-size: 70px;
+        font-size: 60px;
         text-align: center;
         text-wrap: balance;
         font-family: 'Jost';
@@ -51,9 +51,10 @@
         }
       }
 
-      h2 {
+      h1 {
         color: var(--colorText3);
-        font-size: 25px;
+        font-family: 'Poppins';
+        font-size: 24px;
         padding-bottom: 30px;
       }
     }
@@ -160,7 +161,9 @@
       Haz lo que amas, nosotros nos encargamos de los números.
       ¿Qué sientes al enfrentarte a la contabilidad?
     -->
-    <h1 class="title">{t('pageTitle')}</h1>
+    <h2 class="title">{t('pageTitle')}</h2>
+    <h1>{t('pageSubtitle')}</h1>
+    <div style="height: 100px;"></div>
     <img id="pluma" class={move} src="/assets/pluma.png" alt="pluma" width="240px" />
   </div>
 </div>

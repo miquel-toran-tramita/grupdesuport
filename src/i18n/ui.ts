@@ -4,10 +4,12 @@ export const languageList = ['es', 'ca']
 
 export const texts = {
   es: {
-    pageTitle: 'La contabilidad ligera',
+    pageTitle: 'Si no quieres contar, cuenta con nostros',
+    pageSubtitle: 'Gestoría contable, fiscal y laboral',
   },
   ca: {
     pageTitle: 'La contabilitat lleugera',
+    pageSubtitle: '',
   },
 }
 

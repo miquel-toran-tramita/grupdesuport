@@ -161,6 +161,7 @@
   }
 
   .valores-container {
+    margin-top: 300px;
     @include desktop {
       .g-box:nth-child(2) {
         order: -1;
