@@ -12,7 +12,7 @@
   .footer-container {
     border-radius: 16px 16px 0 0;
     background-color: var(--colorSecondary);
-    margin-top: 100px;
+    margin-top: 300px;
     padding: 20px 75px;
 
     display: grid;

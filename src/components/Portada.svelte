@@ -16,9 +16,11 @@
     if (window.scrollY < vh100) move = 'animation-stand-by'
     if (window.scrollY > vh100 / 5) move = 'animation-one'
     if (window.scrollY > vh100 / 1.2) move = 'animation-two'
-    if (window.scrollY > vh100) move = 'animation-three'
+    if (window.scrollY > vh100 * 1.2) move = 'animation-three'
     if (window.scrollY > vh100 * 1.8) move = 'animation-four'
     if (window.scrollY > vh100 * 2.4) move = 'animation-five'
+    if (window.scrollY > vh100 * 2.8) move = 'animation-six'
+    if (window.scrollY > vh100 * 3.2) move = 'animation-seven'
   }
 </script>
 
@@ -72,27 +74,37 @@
       @include desktop {
         &.animation-one {
           transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-          transform: translateY(25vh) translateX(150%) rotateZ(-20deg);
+          transform: translateY(25vh) translateX(180%) rotateZ(-20deg);
         }
 
         &.animation-two {
           transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-          transform: translateY(70vh) translateX(180%) rotateZ(-40deg);
+          transform: translateY(calc(25vh + 400px)) translateX(180%) rotateZ(-40deg);
         }
 
         &.animation-three {
           transition: 5s cubic-bezier(0.5, 0.4, 0.6, 1);
-          transform: translateY(140vh) translateX(-200%) rotateZ(10deg);
+          transform: translateY(calc(25vh + 400px + 50vh)) translateX(-250%) rotateZ(20deg);
         }
 
         &.animation-four {
           transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-          transform: translateY(190vh) translateX(90%) rotateZ(-20deg);
+          transform: translateY(calc(25vh + 400px + 70vh + 280px)) translateX(100%) rotateZ(-20deg); //initial + firsText + testimonals + servicesHeight/2
         }
 
         &.animation-five {
           transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-          transform: translateY(295vh) translateX(0%) rotateZ(0deg);
+          transform: translateY(calc(25vh + 400px + 70vh + 280px + 440px)) translateX(0%) rotateZ(0deg);
+        }
+
+        &.animation-six {
+          transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(calc(25vh + 400px + 70vh + 280px + 440px + 350px)) translateX(-70%) rotateZ(30deg);
+        }
+
+        &.animation-seven {
+          transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+          transform: translateY(calc(25vh + 400px + 70vh + 280px + 440px + 350px + 920px)) translateX(0%) rotateZ(0deg);
         }
       }
     }
@@ -113,7 +125,7 @@
     }
 
     .text {
-      max-width: 700px;
+      max-width: 800px;
       h2 {
         font-size: 28px;
         color: var(--colorPrimary);
@@ -171,24 +183,28 @@
 <div class="g-wrapper">
   <div class="front-text g-box">
     <div class="text">
-      <p>Debería ser un <b>indicador de salud</b>, que te simplifique la toma de decisiones.</p>
-      <p>Que te deje dormir por las noches sabiendo que las cuestiones legales están cubiertas.</p>
+      <p>
+        Muchas veces nos enfocamos en <span class="g-color"> ganar más dinero,</span> pero es igual o más importante
+        <span class="g-color">perder menos.</span>
+      </p>
 
-      <p>Que no te haga perder el tiempo, ni perder los papeles...</p>
+      <p>Y sin hablar de dinero,</p>
 
-      <br />
-      <p>Bueno, eso último <span class="g-color">ya no te volverá a pasar nunca más.</span></p>
+      <p><b>¿Que pasa si tienes un problema con Hacienda por no hacer las cosas bien?</b></p>
       <br />
       <p>
-        Somos una gestoría contable online, que os ayudará a desmontar vuestra contabilidad para montarla de nuevo, sin trucos ni chapuzas.
+        Una contabilidad mediocre, te entrega números a final de año, y nada más, <span class="g-color"
+          >una contabilidad bien gestionada
+        </span> es una herramienta para optimizar lo que ganas para perder menos, especialmente en un país donde los laberintos administrativos
+        y burocráticos son cada vez más complicados.
       </p>
 
       <p>
-        Podreis vaciar la oficina de archivadores, papeles innecesarios y convertirla en un espacio Zen en el que solamente hará falta tener
-        ideas y llegar a acuerdos.
+        <b>Si estabas enfocando bien el problema,</b> tus energías deben estar en ganar más, pero solamente cuando delegar la parte contable
+        y fiscal en buenas manos.
       </p>
 
-      <p class="last-p">Si esto resuena contigo, no eres la única persona, <b>sigue leyendo.</b></p>
+      <p class="last-text">Si este resuena contigo, ya hay personas que los han solucionado. <b> Sigue leyendo.</b></p>
     </div>
   </div>
 </div>
