@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <img src="/assets/logos.png" alt="Colegi d'economistes" />
+    <img src="/assets/logos.webp" alt="Colegi d'economistes" width="374px" height="84px" />
   </div>
 
   <div class="down">

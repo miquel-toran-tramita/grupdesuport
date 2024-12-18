@@ -181,7 +181,7 @@
     <h2 class="title">{t('heroTitle')}</h2>
     <h1>{t('heroSubtitle')}</h1>
     <div style="height: 100px;"></div>
-    <img id="pluma" class={move} src="/assets/pluma.png" alt="pluma" width="240px" />
+    <img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="240px" />
   </div>
 </div>
 
