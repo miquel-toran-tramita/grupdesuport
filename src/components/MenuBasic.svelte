@@ -1,6 +1,7 @@
 <script lang="ts">
   import Svg from '@/components/Svg.svelte'
   import LanguageSelector from '@/components/LanguageSelector.svelte'
+  import { useTranslations, languageList } from '@/i18n/ui'
 
   interface IMenuItem {
     href: string
@@ -8,23 +9,25 @@
     dropdown?: IMenuItem[]
   }
 
+  export let lang: string
+
+  const t = useTranslations(lang as keyof typeof languageList)
   const items: IMenuItem[] = [
     {
       href: '',
-      title: 'Servicios',
+      title: t('menuServices'),
     },
     {
       href: '',
-      title: 'Nosotros',
+      title: t('menuTeam'),
     },
     {
       href: '',
-      title: 'Contacto',
+      title: t('menuContact'),
     },
   ]
 
   let open: boolean = false
-  export let lang: string
 
   const openMenu = () => {
     open = !open

@@ -15,10 +15,6 @@ export default defineConfig({
   i18n: {
     defaultLocale: 'es',
     locales: ['es', 'ca'],
-    routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: false,
-    },
   },
   server: {
     port: 4000,

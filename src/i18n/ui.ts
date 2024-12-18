@@ -4,6 +4,9 @@ export const languageList = ['es', 'ca']
 
 export const texts = {
   es: {
+    menuServices: 'Servicios',
+    menuTeam: 'Nosotros',
+    menuContact: 'Contacto',
     heroTitle: '¿Y si estás enfocando mal el problema?',
     heroSubtitle: 'Gestoría contable, fiscal y laboral',
     firstText:
@@ -43,10 +46,13 @@ export const texts = {
     footerLegal: 'Aviso legal',
   },
   ca: {
+    menuServices: 'Serveis',
+    menuTeam: 'Nosaltres',
+    menuContact: 'Contacte',
     heroTitle: 'I si estàs enfocant malament el problema?',
     heroSubtitle: 'Gestoria comptable, fiscal i laboral',
     firstText:
-      "Moltes vegades ens enfoquem a guanyar més diners, però és igual o més important perdre'n menys.\n\nI sense parlar de diners,\n\nQuè passa si tens un problema amb Hisenda per no fer les coses bé?\n\nUna comptabilitat mediocre et dona números a final d'any, i res més. Una comptabilitat ben gestionada és una eina per optimitzar el que guanyes per perdre menys, especialment en un país on els laberints administratius i burocràtics són cada cop més complicats.\n\nSi enfocaves bé el problema, les teves energies haurien d'estar a guanyar més, però només quan delegues la part comptable i fiscal en bones mans.\n\nSi això et ressona, ja hi ha persones que ho han solucionat. Segueix llegint.",
+      '<p>Moltes vegades ens enfoquem a guanyar més diners, però és igual o més important <b> perdre menys</b>.</p><p>I sense parlar de diners,<br/><span class="g-color">Què passa si Hisenda truca a la teva porta per no fer les coses bé?</span></p><p>Una comptabilitat mediocre et dona números a final d’any, i res més; una comptabilitat ben gestionada és una eina per optimitzar el que guanyes per perdre menys, especialment en un país on els laberints administratius i burocràtics són cada vegada més complicats.</p><br/><p>A veure, <span class="g-color">si estaves enfocant bé el problema</span>, les teves energies han d’estar en guanyar més, però només quan la part comptable i fiscal està en bones mans.</p><p>Si això et ressona, ja hi ha persones que tenen els seus comptes optimitzats.<br/><b>Segueix llegint.</b></p>',
     servicesTitle: 'Què fem exactament?',
     servicesA: 'Facturació i pagaments',
     servicesB: 'Configuració i Assessorament Tecnològic',
@@ -56,22 +62,30 @@ export const texts = {
     howWeWorkTitle: 'Com treballem?',
     howWeWorkATitle: 'Amb confiança',
     howWeWorkADescription:
-      'No volem amagar res, perquè ens agrada pensar que vivim en una nova època en què ningú podrà amagar les seves malifetes.',
+      'No volem amagar res, perquè ens agrada pensar que estem entrant en una nova època on ningú ja no podrà amagar les seves trapelleries.',
     howWeWorkBTitle: 'Amb innovació',
     howWeWorkBDescription: 'La comptabilitat i els papers són cosa del passat.',
     howWeWorkCTitle: 'Amb sostenibilitat',
     howWeWorkCDescription:
-      "No només ecològica. Volem i podem mesurar l'impacte de la nostra activitat i també el del vostre negoci si ens ho demaneu.",
+      'No només ecològica. Volem i podem mesurar l’impacte de la nostra activitat i també la del vostre negoci si ens ho demaneu.',
     howWeWorkDTitle: 'Amb solidaritat',
     howWeWorkDDescription:
-      "Perquè creiem que els projectes col·lectius o individuals de les persones emprenedores poden aportar tant a la societat com ho fan els subsidis de l'Estat.",
+      'Perquè creiem que els projectes col·lectius o individuals de les persones emprenedores poden aportar tant a la societat com ho fan els subsidis de l’Estat.',
     howWeWorkETitle: 'Amb justícia',
     howWeWorkEDescription:
-      'Internament, garantint un tracte equitatiu amb tots els membres de la nostra organització i externament, procurant mantenir uns preus justos i una col·laboració profitosa amb els nostres clients.',
+      'Internament garantint un tracte equitatiu amb tots els membres de la nostra organització i externament procurant mantenir uns preus justos i una col·laboració profitosa amb els nostres clients.',
     pricesTitle: 'Volem empatitzar amb la teva situació i buscar el bé comú',
     pricesText:
-      "Ens agrada oferir una comunicació fluida, propera i honesta. Per això mateix no podem donar-te un preu sense conèixer la teva situació.\n\nFes clic al botó de sota i parlarem sobre qüestions com:\nQuè passa si ets autònom o pime, si el teu projecte està en pèrdues, si té menys d'un any de vida o quins serveis necessites.",
+      '<p>Ens agrada oferir una comunicació fluida, propera i honesta, per això mateix no et podem donar un preu sense conèixer la teva situació.</p><p>Fes clic al botó de sota i parlarem sobre qüestions com:</p><p>Què passa si ets autònom o pime, si el teu projecte està en pèrdues, si té menys d’un any de vida o quins serveis necessites.</p>',
     pricesCTA: 'Concertar una cita',
+    contactFormTitle: 'Formulari de contacte',
+    contactFormInputName: 'Nom i cognoms',
+    contactFormInputEmail: 'Correu electrònic',
+    contactFormInputPhone: 'Telèfon',
+    contactFormInputMsg: 'Missatge',
+    contactFormTandC: 'Accepto la <a href="/politica-privacidad">política de privadesa i rebre un contacte amb finalitats comercials</a>',
+    footerPrivacy: 'Política de privadesa',
+    footerLegal: 'Avís legal',
   },
 }
 

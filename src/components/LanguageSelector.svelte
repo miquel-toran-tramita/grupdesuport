@@ -14,6 +14,8 @@
       currentURL = `${url.origin}/${newLang}${url.pathname}${url.search}${url.hash}`
     }
 
+    if (newLang === 'es') currentURL = currentURL.replace('/es', '')
+
     // Redirige a la nueva URL
     window.location.href = currentURL
   }
