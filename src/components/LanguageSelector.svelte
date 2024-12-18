@@ -38,7 +38,7 @@
       color: var(--colorText3);
       border-radius: 5px;
       width: 30px;
-      line-height: 1.5;
+      line-height: 1.6;
       text-transform: uppercase;
 
       &.active {

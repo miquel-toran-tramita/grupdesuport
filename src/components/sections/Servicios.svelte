@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Svg from '../Svg.svelte'
+  import Svg from '@/components/Svg.svelte'
+  import { useTranslations, languageList } from '@/i18n/ui'
 
   interface ICard {
     icon: string
@@ -7,60 +8,44 @@
     description?: string
   }
 
+  export let lang: string
+
+  const t = useTranslations(lang as keyof typeof languageList)
+
   const servicios: ICard[] = [
-    {
-      icon: 'money',
-      title: 'Facturación y pagos',
-      description: '',
-    },
-    { icon: 'gear', title: 'Configuración y Asesoría Tecnológica', description: '' },
-    {
-      icon: 'handshake',
-      title: 'Conciliaciones y Registros Contables',
-      description: '',
-    },
-    {
-      icon: 'balance',
-      title: 'Presentaciones y Obligaciones Legales',
-      description: '',
-    },
-    {
-      icon: 'receipt',
-      title: 'Informes y Estados Financieros',
-      description: '',
-    },
+    { icon: 'money', title: t('servicesA') },
+    { icon: 'gear', title: t('servicesB') },
+    { icon: 'handshake', title: t('servicesC') },
+    { icon: 'balance', title: t('servicesD') },
+    { icon: 'receipt', title: t('servicesE') },
   ]
 
   const valores: ICard[] = [
     {
       icon: 'person',
-      title: 'Con confianza',
-      description:
-        'No queremos ocultar nada, porque nos gusta pensar que empezamos a vivir en una nueva época en la que ya nadie podrá esconder sus tropelías.',
+      title: t('howWeWorkATitle'),
+      description: t('howWeWorkADescription'),
     },
     {
       icon: 'gear',
-      title: 'Con innovación',
-      description: 'La contabilidad y los papeles son cosa del pasado.',
+      title: t('howWeWorkBTitle'),
+      description: t('howWeWorkBDescription'),
     },
     {
       icon: 'leaf',
-      title: 'Con sostenibilidad',
-      description:
-        'No solamente ecológica. Queremos y podemos medir el impacto de nuestra actividad y también la de vuestro negocio si así nos lo solicitáis.',
+      title: t('howWeWorkCTitle'),
+      description: t('howWeWorkCDescription'),
     },
     {
       icon: 'diversity',
-      title: 'Con solidaridad',
-      description:
-        'Porqué creemos que los proyectos colectivos o individuales de las personas emprendedoras pueden aportar tanto a la sociedad como lo hacen los subsidios del Estado.',
+      title: t('howWeWorkDTitle'),
+      description: t('howWeWorkDDescription'),
     },
 
     {
       icon: 'balance',
-      title: 'Con justicia',
-      description:
-        'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos y una provechosa colaboración con nuestros clientes.',
+      title: t('howWeWorkETitle'),
+      description: t('howWeWorkEDescription'),
     },
   ]
 </script>
@@ -172,7 +157,7 @@
 
 <div class="servicios-container g-wrapper">
   <div class="main g-box">
-    <h3>¿Qué hacemos exactamente?</h3>
+    <h3>{t('servicesTitle')}</h3>
   </div>
   {#each servicios as servicio}
     <div class="servicio g-box">
@@ -185,7 +170,7 @@
 
 <div class="valores-container g-wrapper">
   <div class="main g-box">
-    <h3>¿Cómo trabajamos?</h3>
+    <h3>{t('howWeWorkTitle')}</h3>
   </div>
   {#each valores as valor}
     <div class="valor g-box">

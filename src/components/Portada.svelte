@@ -173,8 +173,8 @@
       Haz lo que amas, nosotros nos encargamos de los números.
       ¿Qué sientes al enfrentarte a la contabilidad?
     -->
-    <h2 class="title">{t('pageTitle')}</h2>
-    <h1>{t('pageSubtitle')}</h1>
+    <h2 class="title">{t('heroTitle')}</h2>
+    <h1>{t('heroSubtitle')}</h1>
     <div style="height: 100px;"></div>
     <img id="pluma" class={move} src="/assets/pluma.png" alt="pluma" width="240px" />
   </div>
@@ -183,34 +183,13 @@
 <div class="g-wrapper">
   <div class="front-text g-box">
     <div class="text">
-      <p>
-        Muchas veces nos enfocamos en <span class="g-color"> ganar más dinero,</span> pero es igual o más importante
-        <span class="g-color">perder menos.</span>
-      </p>
-
-      <p>Y sin hablar de dinero,</p>
-
-      <p><b>¿Que pasa si tienes un problema con Hacienda por no hacer las cosas bien?</b></p>
-      <br />
-      <p>
-        Una contabilidad mediocre, te entrega números a final de año, y nada más, <span class="g-color"
-          >una contabilidad bien gestionada
-        </span> es una herramienta para optimizar lo que ganas para perder menos, especialmente en un país donde los laberintos administrativos
-        y burocráticos son cada vez más complicados.
-      </p>
-
-      <p>
-        <b>Si estabas enfocando bien el problema,</b> tus energías deben estar en ganar más, pero solamente cuando delegar la parte contable
-        y fiscal en buenas manos.
-      </p>
-
-      <p class="last-text">Si este resuena contigo, ya hay personas que los han solucionado. <b> Sigue leyendo.</b></p>
+      {@html t('firstText')}
     </div>
   </div>
 </div>
 <Testimonials />
 
-<Servicios />
-<Tarifas />
+<Servicios {lang} />
+<Tarifas {lang} />
 
 <svelte:window on:scroll={handleScroll} />

@@ -187,7 +187,7 @@
           align-items: center;
           justify-content: center;
 
-          padding: 75px;
+          padding: 20px;
           color: var(--colorText) !important;
           font-size: 20px;
 
@@ -220,6 +220,7 @@
         .burger {
           display: block;
           margin-top: 2px;
+          z-index: 2;
         }
       }
     }
@@ -240,7 +241,7 @@
     <div class="items">
       {#each items as item, i}
         <div class="item-group">
-          <a class="item" href="https://nomadpsicologia.com/#{item.href}" class:cita={i === 3}>{item.title}</a>
+          <a class="item" href={item.href} class:cita={i === 3}>{item.title}</a>
 
           {#if item.dropdown}
             <div class="dropdown">
@@ -263,7 +264,7 @@
 
     <div class="items-mobile" class:open>
       {#each items as item}
-        <a class="item" href="https://nomadpsicologia.com/#{item.href}" title={item.title} on:click={openMenu}>{item.title}</a>
+        <a class="item" href={item.href} title={item.title} on:click={openMenu}>{item.title}</a>
 
         {#if item.dropdown}
           {#each item.dropdown as subItem}

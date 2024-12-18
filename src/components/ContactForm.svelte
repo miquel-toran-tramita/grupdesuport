@@ -3,8 +3,12 @@
   import Checkbox from '@/components/Checkbox.svelte'
   import Svg from '@/components/Svg.svelte'
   import Button from '@/components/Button.svelte'
+  import { useTranslations, languageList } from '@/i18n/ui'
 
   export let context: string = ''
+  export let lang: string
+
+  const t = useTranslations(lang as keyof typeof languageList)
 
   let btnCopy = 'Enviar'
 
@@ -118,8 +122,8 @@
     prefix="person"
     error={data.name.error}
     bind:value={data.name.value}
-    label="Nombre y apellidos"
-    placeholder="Nombre y apellidos"
+    label={t('contactFormInputName')}
+    placeholder={t('contactFormInputName')}
     autocomplete="name"
   />
 
@@ -129,8 +133,8 @@
     error={data.email.error}
     bind:value={data.email.value}
     bind:externalValidate={data.email.validate}
-    label="Correo electrónico"
-    placeholder="Correo electrónico"
+    label={t('contactFormInputEmail')}
+    placeholder={t('contactFormInputEmail')}
     autocomplete="email"
     type="email"
   />
@@ -140,19 +144,26 @@
     prefix="phone"
     error={data.phone.error}
     bind:value={data.phone.value}
-    label="Teléfono"
-    placeholder="Teléfono"
+    label={t('contactFormInputPhone')}
+    placeholder={t('contactFormInputPhone')}
     maxlength={20}
     autocomplete="tel"
     type="tel"
   />
 
-  <Input id="4" bind:value={data.message.value} label="Mensaje" placeholder="Mensaje" maxlength={500} type="textarea" />
+  <Input
+    id="4"
+    bind:value={data.message.value}
+    label={t('contactFormInputMsg')}
+    placeholder={t('contactFormInputMsg')}
+    maxlength={500}
+    type="textarea"
+  />
 
   <div class="legal">
     <Checkbox bind:value={data.tanc.value} />
 
-    <p>Acepto la <a href="/politica-privacidad">política de privacidad y recibir un contacto con fines comerciales</a></p>
+    <p>{@html t('contactFormTandC')}</p>
     {#if data.tanc.error}
       <div class="tandc-error">
         <Svg name="error" width="18" fill="#8a1212" />

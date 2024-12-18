@@ -2,8 +2,13 @@
   import Modal from '@/components/Modal.svelte'
   import Button from '@/components/Button.svelte'
   import ContactForm from '@/components/ContactForm.svelte'
+  import { useTranslations, languageList } from '@/i18n/ui'
 
   export let closed: boolean = true
+
+  export let lang: string
+
+  const t = useTranslations(lang as keyof typeof languageList)
 </script>
 
 <style lang="scss">
@@ -27,28 +32,20 @@
 </style>
 
 <div class="tarifas">
-  <h2 class="g-title g-wrapper">Queremos empatizar con tu situación y buscar el bien común</h2>
+  <h2 class="g-title g-wrapper">{t('pricesTitle')}</h2>
   <div class="g-mini-wrapper">
     <div class="text">
-      <p>
-        Nos gusta ofrecer una comunicación fluida, cercana y honesta, por eso mismo no podemos darte un precio sin conocer tu situación.
-      </p>
-
-      <p>
-        <b>Haz click en el botón de abajo</b>
-        y hablaremos sobre cuestiones como: <br />Que pasa si eres autónomo o pyme, si tu proyecto está en perdidas, si tiene menos de un
-        año de vida o qué servicios necesitas.
-      </p>
+      {@html t('pricesText')}
     </div>
 
-    <Button click={() => (closed = false)}>Concertar una cita</Button>
+    <Button click={() => (closed = false)}>{t('pricesCTA')}</Button>
   </div>
 </div>
 
 <Modal bind:closed>
-  <div slot="modal-header">Formulario de contacto</div>
+  <div slot="modal-header">{t('contactFormTitle')}</div>
 
   <div slot="modal-content" class="modal-content">
-    <ContactForm />
+    <ContactForm {lang} />
   </div>
 </Modal>

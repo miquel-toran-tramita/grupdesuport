@@ -9,17 +9,46 @@
 </script>
 
 <style lang="scss">
+  @use 'src/sass/mixins.scss' as *;
   .footer-container {
     border-radius: 16px 16px 0 0;
     background-color: var(--colorSecondary);
     margin-top: 300px;
-    padding: 20px 75px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    .up {
+      display: flex;
+      justify-content: space-between;
+
+      @include notDesktop {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+
+    .down {
+      display: flex;
+      justify-content: space-between;
+
+      @include notDesktop {
+        flex-direction: column;
+      }
+    }
 
     .logo {
       display: flex;
@@ -29,14 +58,10 @@
       justify-self: start;
     }
 
-    .RRSS {
-      justify-self: end;
-    }
-
     .footer-links {
-      grid-area: 2 / 1 / 3 / 3;
       display: flex;
-      gap: 50px;
+      align-items: center;
+      gap: 10px;
       font-size: 13px;
     }
   }
@@ -51,28 +76,36 @@
 </style>
 
 <div class="footer-container g-wrapper">
-  <span class="logo"> GRUP DE SUPORT SCC {new Date().getFullYear()}</span>
+  <div class="up">
+    <div class="RRSS">
+      <div class="contacts">
+        <a href="info@grupdesuport.com">
+          <Svg name="email" width="25" height="25" fill="var(--colorText2)" />
+          <span>info@grupdesuport.com</span>
+        </a>
 
-  <div class="RRSS">
-    {#each social as RRSS}
-      <a href={RRSS.url} target="blank_">
-        <Svg name={RRSS.name} width="25" height="25" fill="var(--colorText2)" />
-      </a>
-    {/each}
+        <a href="info@grupdesuport.com">
+          <Svg name="phone" width="25" height="25" fill="var(--colorText2)" />
+          <span>650 36 90 27</span>
+        </a>
+      </div>
+    </div>
 
-    <!--<a href="info@grupdesuport.com">
-      <Svg name="email" width="25" height="25" fill="var(--colorText2)" />
-      <span>info@grupdesuport.com</span>
-    </a>
-
-    <a href="info@grupdesuport.com">
-      <Svg name="phone" width="25" height="25" fill="var(--colorText2)" />
-      <span>650 36 90 27</span>
-    </a>-->
+    <img src="/assets/logos.png" alt="Colegi d'economistes" />
   </div>
 
-  <div class="footer-links">
-    <a href="/aviso-legal">Aviso legal</a>
-    <a href="/politica-de-privacidad">Política de privacidad</a>
+  <div class="down">
+    <span class="logo"> GRUP DE SUPORT SCC {new Date().getFullYear()}</span>
+
+    <div class="footer-links">
+      <a href="/aviso-legal">Aviso legal</a>
+      <a href="/politica-de-privacidad">Política de privacidad</a>
+
+      {#each social as RRSS}
+        <a href={RRSS.url} target="blank_">
+          <Svg name={RRSS.name} width="25" height="25" fill="var(--colorText2)" />
+        </a>
+      {/each}
+    </div>
   </div>
 </div>
