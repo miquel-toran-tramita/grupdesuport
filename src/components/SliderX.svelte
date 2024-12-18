@@ -105,11 +105,11 @@
   </div>
 
   <div class="arrows g-wrapper">
-    <button class="arrow left" class:disabled={disablePrev} on:click={previous}>
+    <button class="arrow left" class:disabled={disablePrev} on:click={previous} aria-label="left">
       <Svg name="arrowSlim" width="30" height="30" fill="var(--colorPrimary)" />
     </button>
 
-    <button class="arrow right" class:disabled={disableNext} on:click={next}>
+    <button class="arrow right" class:disabled={disableNext} on:click={next} aria-label="right">
       <Svg name="arrowSlim" width="30" height="30" fill="var(--colorPrimary)" />
     </button>
   </div>

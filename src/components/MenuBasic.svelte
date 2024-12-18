@@ -14,15 +14,15 @@
   const t = useTranslations(lang as keyof typeof languageList)
   const items: IMenuItem[] = [
     {
-      href: '',
+      href: '/servicios',
       title: t('menuServices'),
     },
     {
-      href: '',
+      href: '/nosotros',
       title: t('menuTeam'),
     },
     {
-      href: '',
+      href: '/contacto',
       title: t('menuContact'),
     },
   ]

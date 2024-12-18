@@ -69,7 +69,7 @@
 
 <div class="reviso-container">
   <div class="reviso g-wrapper">
-    <img src="public/assets/remote.svg" alt="" />
+    <img src="public/assets/remote.svg" alt="" loading="lazy" />
     <div class="info">
       <div class="title">¿Por qué <a href="http://www.reviso.com" target="_">Reviso</a>?</div>
 

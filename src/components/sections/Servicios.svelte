@@ -66,7 +66,7 @@
       grid-template-columns: 1fr;
     }
 
-    h3 {
+    .title-section {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -136,7 +136,7 @@
       @include notDesktop {
         grid-column: 1;
 
-        h3 {
+        .title-section {
           font-size: 30px;
           min-height: 100px;
           text-align: center;
@@ -157,7 +157,7 @@
 
 <div class="servicios-container g-wrapper">
   <div class="main g-box">
-    <h3>{t('servicesTitle')}</h3>
+    <p class="title-section">{t('servicesTitle')}</p>
   </div>
   {#each servicios as servicio}
     <div class="servicio g-box">
@@ -170,7 +170,7 @@
 
 <div class="valores-container g-wrapper">
   <div class="main g-box">
-    <h3>{t('howWeWorkTitle')}</h3>
+    <p class="title-section">{t('howWeWorkTitle')}</p>
   </div>
   {#each valores as valor}
     <div class="valor g-box">
