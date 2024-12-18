@@ -81,7 +81,7 @@
   <SliderX>
     {#each testimonials as testimonial}
       <div class="testimonial">
-        <h3 class="title">{testimonial.title}</h3>
+        <span class="title">{testimonial.title}</span>
         <p class="opinion">
           {@html testimonial.opinion}
         </p>

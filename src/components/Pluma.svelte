@@ -79,6 +79,6 @@
   }
 </style>
 
-<img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="240px" loading="lazy" />
+<img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="230px" loading="lazy" />
 
 <svelte:window on:scroll={handleScroll} />

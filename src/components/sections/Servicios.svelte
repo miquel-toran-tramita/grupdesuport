@@ -71,7 +71,7 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      font-size: 50px;
+      font-size: 40px;
       color: white;
     }
 
