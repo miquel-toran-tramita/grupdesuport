@@ -58,6 +58,11 @@
         font-family: 'Poppins';
         font-size: 24px;
         padding-bottom: 30px;
+
+        @include notDesktop {
+          text-align: center;
+          font-size: 20px;
+        }
       }
     }
 

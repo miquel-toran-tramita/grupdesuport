@@ -4,32 +4,35 @@
 
   const testimonials = [
     {
-      title: '¡Increíble crecimiento!',
-      opinion: 'Gracias a este servicio, mi negocio ha crecido más rápido que mi apellido.',
-      name: 'Rosa Melano',
+      title: '¡Una tranquilidad absoluta!',
+      opinion:
+        'Gracias a esta gestoría, puedo centrarme en hacer crecer mi negocio mientras ellos se encargan de toda la parte fiscal y contable.',
+      name: 'Rosa Pérez',
       business: 'Floristería "El Ramo Ideal"',
     },
     {
-      title: 'Éxito garantizado',
-      opinion: 'Nunca pensé que podría alcanzar el éxito con tanta facilidad. ¡Recomendado al 100%!',
-      name: 'Aitor Tilla',
+      title: 'Eficiencia garantizada',
+      opinion: 'Nunca pensé que cumplir con Hacienda y optimizar mis finanzas podría ser tan sencillo. ¡Totalmente recomendados!',
+      name: 'Aitor Gutiérrez',
       business: 'Empresa de Fletes y Mudanzas',
     },
     {
-      title: 'Servicio impresionante',
-      opinion: 'Mejor que cualquier otro servicio que he probado. ¡Impresionante!',
-      name: 'Elsa Pato',
+      title: 'Un servicio impecable',
+      opinion: 'Su asesoramiento contable y fiscal es mejor que cualquier otro servicio que he probado. ¡De 10!',
+      name: 'Elsa Montes',
       business: 'Academia de Natación "La Laguna"',
     },
     {
-      title: 'Cambio total',
-      opinion: 'Mi vida y mi negocio han dado un giro de 180 grados. No podría estar más feliz.',
-      name: 'Benito Camela',
+      title: 'Un cambio radical',
+      opinion:
+        'Desde que confío en esta gestoría, mi empresa está más organizada y mis números mejor gestionados. No puedo estar más satisfecho.',
+      name: 'Benito Hernández',
       business: 'Fábrica de Ventiladores Industriales',
     },
     {
-      title: 'La pizza perfecta',
-      opinion: 'Gracias a este servicio, ahora mis pizzas siempre llegan a tiempo.',
+      title: '¡Sin preocupaciones!',
+      opinion:
+        'Gracias a esta gestoría, ahora mis obligaciones fiscales están siempre al día, y puedo dedicarme a lo que realmente importa: mis clientes.',
       name: 'Pepe Roni',
       business: 'Pizzería "El Sabor del Barrio"',
     },
