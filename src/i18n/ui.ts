@@ -44,6 +44,23 @@ export const texts = {
     contactFormTandC: 'Acepto la <a href="/politica-privacidad">política de privacidad y recibir un contacto con fines comerciales</a>',
     footerPrivacy: 'Política de privacidad',
     footerLegal: 'Aviso legal',
+    teamH1: 'Esta es nuestra historia',
+    teamH2: 'Conoce quien va a llevarte las cuentas',
+    teamFrancescTitle: 'Socio colaborador',
+    teamFrancescDesc:
+      '<p>Soy nacido en Sabadell pero vivo entre Barcelona y San Juan de las Abadesas que es el pueblo de donde proviene parte de mi familia y donde tengo el huerto.</p> <p> A los 23 años me licencié en Historia Medieval en la UAB.</p><p> Desde entonces estoy trabajando en Majoral donde he tenido el privilegio de vivir y participar en la experiencia de un proyecto empresarial extraordinario.</p><p> He hecho recorridos en la UOC para aquellas asignaturas de Ciencias Empresariales que más me interesaban.</p>',
+    teamFrancescStudies: 'Historia Medieval en la UAB <br/>',
+    teamToniTitle: 'Socio trabajador',
+    teamToniDesc:
+      '<p>Nacido en Barcelona de familia aragonesa. Master en Dirección y Administración de Empresas por la EAE y Técnico en Control de Gestión por el CEF. </p><p>Siempre he trabajado en el área contable y de control en empresas en diversos sectores por lo que dispongo de amplia experiencia como controller y contable tanto general como analítico. Soy amante de la naturaleza, muy aficionado a la música ... .y las travesías.</p>',
+    teamToniStudies: '',
+    teamGemmaTitle: 'Socia colaboradora',
+    teamGemmaDesc: `<p>Nacida en Barcelona, hija de padre de San Andrés y madre d'Arbeca (Lleida), actualmente vivo en Badalona.</p><p> Soy diplomada en Ciencias Empresariales por la UB.</p><p> Llevo más de veinte y cinco años trabajando como contable y soy especialista en fiscalidad general incluyendo también la de los residentes comunitarios y no comunitarios.</p>`,
+    teamGemmaStudies: '',
+    teamJordiTitle: 'Socio trabajador',
+    teamJordiDesc: `<p>Nacido y residente en Lleida, hijo de padre del Pallars Sobirà y madre del Pla d'Urgell.</p><p> Soy diplomado en Ciencias Empresariales por la UdL.</p><p> Tengo el Certificado de Aptitud Pedagógica y actualmente he cursado una especialización en economía social y solidaria en la Universidad de Lleida.</p><p> Desde siempre he trabajado en el área contable y fiscal, primero en un grupo de franquicias del sector de la hostelería y actualmente en una empresa del campo de la iluminación.</p>`,
+    teamJordiStudies: '',
+    teamBigDescription: `<p>La idea de fundar Grup de Suport surge a partir de la última crisis económica.</p><p> Muchas pequeñas y medianas empresas se ven en la necesidad de reducir estructura y numerosos profesionales de la contabilidad se quedan sin empleo. Algunos quedan fuera del mercado laboral y otros encuentran trabajo en precario como autónomos. </p><p>Grup de Suport adopta la forma jurídica de cooperativa y ofrece cobertura en el Régimen General para sus miembros, así como un conjunto de servicios de márqueting y herramientas de Software que permiten a sus miembros trabajar con dignidad y usando la tecnología más puntera.</p><p> Grup de Suport se ofrece a estas mismas empresas que con la crisis se vieron obligadas a introducir cambios en su gestión, muchos de ellos con consecuencias dramáticas. Les ofrece sus servicios a costes razonables. Contabilidad, asesoría fiscal, laboral y todo tipo de servicios de soporte a las empresas.</p>`,
   },
 
   ca: {

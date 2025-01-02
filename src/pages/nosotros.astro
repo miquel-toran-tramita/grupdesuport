@@ -1,0 +1,109 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import TeamMember from '@/components/TeamMember.svelte'
+import type { ITeamMember } from '@/interfaces/ITeamMember'
+import { defaultLang, useTranslations, languageList } from '@/i18n/ui'
+
+const lang = Astro.currentLocale || defaultLang
+
+const t = useTranslations(lang as keyof typeof languageList)
+
+const teamMembers: ITeamMember[] = [
+  {
+    name: 'Francesc Picanyol',
+    src: 'francesc',
+    title: t('teamFrancescTitle'),
+    description: t('teamFrancescDesc'),
+    studies: t('teamFrancescStudies'),
+  },
+  {
+    name: 'Gemma Suriñà',
+    src: 'gemma',
+    title: t('teamGemmaTitle'),
+    description: t('teamGemmaDesc'),
+    studies: t('teamGemmaStudies'),
+  },
+  {
+    name: 'Antonio Torán',
+    src: 'toni',
+    title: t('teamToniTitle'),
+    description: t('teamToniDesc'),
+    studies: t('teamToniStudies'),
+  },
+  {
+    name: 'Jordi Cervós Escribà',
+    src: 'jordi',
+    title: t('teamJordiTitle'),
+    description: t('teamJordiDesc'),
+    studies: t('teamJordiStudies'),
+  },
+]
+---
+
+<style lang="scss">
+  @use 'src/sass/mixins.scss' as *;
+
+  .introduction {
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+    .first-block {
+      display: flex;
+      gap: 20px;
+
+      img {
+        object-fit: cover;
+        padding: 0;
+      }
+
+      .desc {
+        background-color: var(--colorSecondary);
+      }
+    }
+  }
+
+  h1,
+  h2 {
+    background-color: var(--colorSecondary);
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  .team-members {
+    display: flex;
+    gap: 20px;
+  }
+</style>
+
+<Layout title="Grup de suport | Nosotros" frozen>
+  <div class="g-wrapper">
+    <div class="introduction">
+      <h1 class="g-box">{t('teamH1')}</h1>
+
+      <div class="first-block">
+        <div class="desc g-box" set:html={t('teamBigDescription')} />
+        <img class="g-box" src="/assets/team/team.jpg" alt="" />
+      </div>
+    </div>
+    <h2 class="g-box">{t('teamH2')}</h2>
+    <div class="team-members">
+      {
+        teamMembers.map((teamMember) => (
+          <TeamMember
+            name={teamMember.name}
+            src={teamMember.src}
+            description={teamMember.description}
+            title={teamMember.title}
+            studies={teamMember.studies}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Layout>

@@ -7,10 +7,12 @@ import { defaultLang } from '@/i18n/ui'
 const lang = Astro.currentLocale || defaultLang
 export interface Props {
   title: string
+  frozen: boolean
 }
 
 const props = Astro.props
 const title = props.title
+const frozen = props.frozen
 ---
 
 <!doctype html>
@@ -30,7 +32,7 @@ const title = props.title
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <MenuBasic {lang} client:load />
+    <MenuBasic {lang} client:load {frozen} />
 
     <slot />
 

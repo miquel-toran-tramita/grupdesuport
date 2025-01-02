@@ -28,6 +28,7 @@
   ]
 
   let open: boolean = false
+  export let frozen: boolean = false
 
   const openMenu = () => {
     open = !open
@@ -37,10 +38,12 @@
 
   let prevScrollpos: number = 0
 
-  let scrolled: boolean = false
+  let scrolled: boolean = frozen
   let hidden: boolean = false
 
   const handleScroll = () => {
+    if (frozen) return (scrolled = true)
+
     scrolled = window.scrollY > 50
 
     hidden = prevScrollpos > window.scrollY && scrolled

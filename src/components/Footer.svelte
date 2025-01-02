@@ -13,7 +13,7 @@
   .footer-container {
     border-radius: 16px 16px 0 0;
     background-color: var(--colorSecondary);
-    margin-top: 300px;
+    margin-top: 200px;
     padding: 20px;
     display: flex;
     flex-direction: column;
