@@ -55,7 +55,7 @@
   .servicios-container,
   .valores-container {
     width: 100%;
-    margin-top: 20px;
+    padding-top: 50px;
     margin-bottom: 20px;
 
     display: grid;
@@ -155,7 +155,7 @@
   }
 </style>
 
-<div class="servicios-container g-wrapper">
+<div class="servicios-container g-wrapper" id="servicios">
   <div class="main g-box">
     <p class="title-section">{t('servicesTitle')}</p>
   </div>

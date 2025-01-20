@@ -14,7 +14,7 @@
   const t = useTranslations(lang as keyof typeof languageList)
   const items: IMenuItem[] = [
     {
-      href: '/servicios',
+      href: '#servicios',
       title: t('menuServices'),
     },
     {
@@ -22,7 +22,7 @@
       title: t('menuTeam'),
     },
     {
-      href: '/contacto',
+      href: '#contacto',
       title: t('menuContact'),
     },
   ]
@@ -46,7 +46,7 @@
 
     scrolled = window.scrollY > 50
 
-    hidden = prevScrollpos > window.scrollY && scrolled
+    hidden = prevScrollpos < window.scrollY && scrolled
 
     prevScrollpos = window.scrollY
   }
