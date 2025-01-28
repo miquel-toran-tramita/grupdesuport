@@ -207,6 +207,49 @@ export const texts = {
       </li>
     </ol>
     `,
+    cookiesH1: 'POLÍTICA DE COOKIES',
+    cookiesTextADesc: `
+<p>De acuerdo con la normativa vigente, GRUP DE SUPORT SCC facilita a los usuarios información relativa a las cookies que utiliza y los motivos de su uso, así como solicita su consentimiento para poder utilizarlas.</p>
+
+<p>GRUP DE SUPORT SCC utiliza cookies propias y de terceros con el fin de ofrecer una mejor experiencia de navegación y un mejor servicio. No obstante, el usuario tiene la opción de impedir la generación de cookies y su eliminación mediante la selección de la opción correspondiente en su navegador. En caso de bloquear el uso de cookies en su navegador, es posible que algunos servicios o funcionalidades de la página web no estén disponibles.</p>
+`,
+    cookiesTextBTitle: '¿Qué es una “cookie”?',
+    cookiesTextBDesc: `
+<p>Las cookies constituyen una herramienta utilizada por los servidores web para almacenar y recuperar información relativa a los usuarios. Son pequeños archivos de texto que las páginas web envían al navegador y que se almacenan en el terminal del usuario, ya sea un ordenador, un teléfono móvil o una tableta. Esta información permite recuperar datos como, por ejemplo, datos de conexión a las redes sociales o preferencias de navegación. Estos datos son almacenados para ser recordados cuando el usuario visita nuevamente la página web.</p>
+`,
+    cookiesTextCTitle: '¿Cómo se utilizan las cookies y qué tipo de información guardan?',
+    cookiesTextCDesc: `
+<p>Al navegar por la página web, el usuario está aceptando que se puedan instalar cookies en su terminal que permitan conocer la siguiente información:</p>
+<ul>
+  <li>Información estadística del uso de la web</li>
+  <li>El formato de la web que prefiere para acceder desde dispositivos móviles</li>
+  <li>La actividad que ha llevado a cabo el usuario en la web (páginas vistas, búsquedas, etc.)</li>
+  <li>Datos de conexión a redes sociales para los usuarios que acceden con su usuario de redes sociales</li>
+</ul>
+`,
+    cookiesTextDTitle: 'Tipos de cookies utilizadas',
+    cookiesTextDDesc: `
+<p>Cookies de sesión: son cookies temporales que permanecen en el archivo de cookies de su navegador hasta que abandona la página web, por lo que ninguna de ellas queda registrada en el disco duro del usuario. La información obtenida mediante estas cookies sirve para analizar patrones de tráfico en la web.</p>
+<p>Cookies permanentes: se almacenan en el disco duro y nuestra web las lee cada vez que usted realiza una nueva visita. Una cookie permanente tiene una fecha de expiración/caducidad determinada y dejará de funcionar después de dicha fecha.</p>
+<p>A continuación, publicamos una relación de las principales cookies utilizadas en nuestra web, distinguiendo entre las siguientes:</p>
+
+<ul>
+  <li>Las cookies estrictamente necesarias, como aquellas que sirven para una correcta navegación o cookies que verifican que el contenido de la página web se carga eficazmente.</li>
+  <li>Las cookies de terceros, como por ejemplo las usadas por redes sociales o por complementos externos de contenido como Facebook, Twitter o LinkedIn.</li>
+  <li>Las cookies analíticas con propósitos de mantenimiento periódico, y en honor de garantizar el mejor servicio posible al usuario, los sitios web utilizan normalmente cookies analíticas para recopilar datos estadísticos de la actividad.</li>
+</ul>
+`,
+    cookiesTextETitle: 'Configuración de cookies según el navegador',
+    cookiesTextEDesc: `
+<p>Usted, como usuario, puede bloquear o deshabilitar la instalación de cookies a través de la configuración de su navegador, lo que le ofrece un control más preciso de su privacidad, pudiendo inhabilitar las cookies de todos los sitios web que no sean de su confianza, según las capacidades del navegador.</p>
+<p>La mayoría de los navegadores permiten advertir la presencia de cookies o rechazarlas automáticamente.</p>
+`,
+    cookiesTextFTitle: 'Aceptación de la política de cookies',
+    cookiesTextFDesc: `
+<p>El usuario acepta expresamente, por la utilización de este sitio web, el tratamiento de la información obtenida en la forma y con las finalidades descritas.</p>
+<p>Asimismo, admite conocer la posibilidad de rechazar el tratamiento de los datos y/o de la información rechazando el uso de cookies mediante la selección de la configuración apropiada en su navegador.</p>
+<p>Si bien conoce que esta opción de bloqueo de cookies puede no permitirle el uso pleno de todas las funcionalidades del sitio web.</p>
+`,
   },
 
   ca: {
@@ -250,6 +293,23 @@ export const texts = {
     contactFormTandC: 'Accepto la <a href="/politica-privacidad">política de privacitat i rebre un contacte amb finalitats comercials</a>',
     footerCookies: 'Política de cookies',
     footerLegal: 'Avís legal',
+    teamH1: 'Aquesta és la nostra història',
+    teamH2: 'Coneix qui portarà els teus comptes',
+    teamFrancescTitle: 'Soci col·laborador',
+    teamFrancescDesc:
+      '<p>Sóc nascut a Sabadell però visc entre Barcelona i Sant Joan de les Abadesses, que és el poble d’on prové part de la meva família i on tinc l’hort.</p> <p> Als 23 anys em vaig llicenciar en Història Medieval a la UAB.</p><p> Des de llavors treballo a Majoral, on he tingut el privilegi de viure i participar en l’experiència d’un projecte empresarial extraordinari.</p><p> He fet cursos a la UOC per aquelles assignatures de Ciències Empresarials que més m’interessaven.</p>',
+    teamFrancescStudies: 'Història Medieval a la UAB <br/>',
+    teamToniTitle: 'Soci treballador',
+    teamToniDesc:
+      '<p>Nascut a Barcelona de família aragonesa. Màster en Direcció i Administració d’Empreses per l’EAE i Tècnic en Control de Gestió pel CEF. </p><p>Sempre he treballat en l’àrea comptable i de control en empreses de diversos sectors, per la qual cosa disposo d’una àmplia experiència com a controller i comptable, tant general com analític. Sóc amant de la natura, molt aficionat a la música ... i les travesses.</p>',
+    teamToniStudies: '',
+    teamGemmaTitle: 'Sòcia col·laboradora',
+    teamGemmaDesc: `<p>Nascuda a Barcelona, filla de pare de Sant Andreu i mare d’Arbeca (Lleida), actualment visc a Badalona.</p><p> Sóc diplomada en Ciències Empresarials per la UB.</p><p> Porto més de vint-i-cinc anys treballant com a comptable i sóc especialista en fiscalitat general, incloent-hi també la dels residents comunitaris i no comunitaris.</p>`,
+    teamGemmaStudies: '',
+    teamJordiTitle: 'Soci treballador',
+    teamJordiDesc: `<p>Nascut i resident a Lleida, fill de pare del Pallars Sobirà i mare del Pla d’Urgell.</p><p> Sóc diplomat en Ciències Empresarials per la UdL.</p><p> Tinc el Certificat d’Aptitud Pedagògica i actualment he cursat una especialització en economia social i solidària a la Universitat de Lleida.</p><p> Des de sempre he treballat en l’àrea comptable i fiscal, primer en un grup de franquícies del sector de l’hostaleria i actualment en una empresa del camp de la il·luminació.</p>`,
+    teamJordiStudies: '',
+    teamBigDescription: `<p>La idea de fundar Grup de Suport sorgeix arran de l’última crisi econòmica.</p><p> Moltes petites i mitjanes empreses es veuen en la necessitat de reduir estructura i nombrosos professionals de la comptabilitat es queden sense feina. Alguns queden fora del mercat laboral i altres troben treball en precari com a autònoms. </p><p>Grup de Suport adopta la forma jurídica de cooperativa i ofereix cobertura en el Règim General per als seus membres, així com un conjunt de serveis de màrqueting i eines de programari que permeten als seus membres treballar amb dignitat i utilitzant la tecnologia més avançada.</p><p> Grup de Suport s’ofereix a aquestes mateixes empreses que amb la crisi es van veure obligades a introduir canvis en la seva gestió, molts d’ells amb conseqüències dramàtiques. Els ofereix els seus serveis a costos raonables: comptabilitat, assessorament fiscal, laboral i tot tipus de serveis de suport a les empreses.</p>`,
     legalH1: 'AVÍS LEGAL',
     legalTextATitle: 'Informació general',
     legalTextADesc: `
@@ -395,6 +455,49 @@ export const texts = {
           </p>
         </li>
       </ol>
+      `,
+    cookiesH1: 'POLÍTICA DE COOKIES',
+    cookiesTextADesc: `
+      <p>D’acord amb la normativa vigent,  GRUP DE SUPORT SCC facilita als usuaris informació relativa a les cookies que utilitza i els motius del seu ús, així com sol·licita el seu consentiment per poder utilitzar-les.</p>
+  
+      <p> GRUP DE SUPORT SCC utilitza cookies pròpies i de tercers per tal d’oferir una millor experiència de navegació i un millor servei. No obstant l’usuari té l’opció d’impedir la generació de cookies i l’eliminació de les mateixes mitjançant la selecció de la corresponent opció al seu navegador. En cas de bloquejar l’ús de les cookies al seu navegador, és possible que alguns serveis o funcionalitats de la pàgina web no estiguin disponibles.</p>
+      `,
+    cookiesTextBTitle: 'Què és una ‘cookie’?',
+    cookiesTextBDesc: `
+      <p>Les cookies constitueixen una eina utilitzada pels servidors web per emmagatzemar i recuperar informació relativa als usuaris. Són petits arxius de text que les pàgines web envien al navegador i que s’emmagatzemen al terminal de l’usuari, ja sigui un ordinador, un telèfon mòbil o una tauleta. Aquesta informació permet recuperar informació com per exemple dades de connexió a les xarxes socials o dades de preferències de navegació. Aquestes dades són emmagatzemades per a ser recordades quan l’usuari visita de nou la pàgina web.</p>
+      `,
+    cookiesTextCTitle: 'Com s’utilitzen les cookies i quin tipus d’informació guarden?',
+    cookiesTextCDesc: `
+      <p>Al navegar per la pàgina web, l’usuari està acceptant que es puguin instal·lar cookies al seu terminal que permetin conèixer la següent informació:</p>
+      <ul>
+        <li>Informació estadística de l’ús de la web</li>
+        <li>El format de web que prefereix per accedir als dispositius mòbils</li>
+        <li>L’activitat que ha dut a terme l’usuari al web (pàgines vistes, cerques, etc.)</li>
+        <li>Dades de connexió a les xarxes socials per als usuaris que accedeixen amb el seu usuari de xarxes socials</li>
+      </ul>
+      `,
+    cookiesTextDTitle: 'Tipus de cookies utilitzades',
+    cookiesTextDDesc: `
+      <p>Cookies de sessió: són cookies temporals que romanen a l’arxiu de cookies del seu navegador fins que abandoni la pàgina web, per la qual cosa, cap d’elles queda registrada al disc dur de l’usuari. La informació obtinguda per mitjà d’aquestes cookies serveix per analitzar pautes de tràfic a la web.</p>
+      <p>Cookies permanents: són emmagatzemades al disc dur i la nostra web les llegeix cada vegada que vostè realitza una nova visita. Una cookie permanent té una data d’expiració/caducitat determinada i deixarà de funcionar després d’aquesta data.</p>
+      <p>A continuació publiquem una relació de les principals cookies utilitzades a la nostra web, i distingim entre les següents:</p>
+  
+      <ul>
+        <li>Les cookies estrictament necessàries, com ara aquelles que serveixin per a una correcta navegació o cookies que serveixin per verificar que el contingut de la pàgina web es carrega eficaçment.</li>
+        <li>Les cookies de tercers, com per exemple les usades per xarxes socials, o per complements externs de contingut com ara Facebook, Twitter o Linkedin.</li>
+        <li>Les cookies analítiques amb propòsits de manteniment periòdic, i en honor de garantir el millor servei possible a l’usuari, els llocs webs fan ús normalment de cookies analítiques per recopilar dades estadístiques de l’activitat .</li>
+      </ul>
+      `,
+    cookiesTextETitle: 'Configuració de cookies segons el navegador',
+    cookiesTextEDesc: `
+      <p>Vostè com a usuari pot bloquejar o deshabilitar la instal·lació de cookies a través de la configuració del seu navegador, cosa que li ofereix un control més precís de la seva privacitat, podent inhabilitar les cookies de tots els lloc web que no siguin de la seva confiança, segons les capacitats del navegador.</p>
+      <p>La pràctica majoria de navegadors permeten advertir la presència de cookies o rebutjar-les automàticament.</p>
+      `,
+    cookiesTextFTitle: 'Acceptació de la política de cookies',
+    cookiesTextFDesc: `
+      <p>L’usuari accepta expressament, per la utilització d’aquest lloc web, el tractament de la informació obtinguda en la forma i amb les finalitats descrites.</p>
+      <p>Tanmateix admet conèixer la possibilitat de rebutjar el tractament de les dades i/o de la informació rebutjant l’ús de cookies mitjançant la selecció de la configuració apropiada en el seu navegador.</p>
+      <p>Si bé coneix que aquesta opció de bloqueig de cookies pot no permetre-li l’ús ple de totes las funcionalitats del lloc web.</p>
       `,
   },
 }

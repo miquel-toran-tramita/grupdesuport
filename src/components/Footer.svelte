@@ -104,7 +104,7 @@
 
     <div class="footer-links">
       <a href="{lang === 'ca' ? '/ca' : ''}/aviso-legal">{t('footerLegal')}</a>
-      <a href="{lang === 'ca' ? '/ca' : ''}/politica-de-privacidad">{t('footerCookies')}</a>
+      <a href="{lang === 'ca' ? '/ca' : ''}/politica-cookies">{t('footerCookies')}</a>
 
       {#each social as RRSS}
         <a href={RRSS.url} target="blank_">
