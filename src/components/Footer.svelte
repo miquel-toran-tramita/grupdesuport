@@ -1,5 +1,10 @@
 <script lang="ts">
+  import { defaultLang, useTranslations, languageList } from '@/i18n/ui'
   import Svg from './Svg.svelte'
+
+  export let lang: string
+
+  const t = useTranslations(lang as keyof typeof languageList)
 
   const social = [
     { name: 'linkedin', url: 'https://www.linkedin.com/in/grup-de-suport-scc-797501127/' },
@@ -98,8 +103,8 @@
     <span class="logo"> GRUP DE SUPORT SCC {new Date().getFullYear()}</span>
 
     <div class="footer-links">
-      <a href="/aviso-legal">Aviso legal</a>
-      <a href="/politica-de-privacidad">Política de privacidad</a>
+      <a href="{lang === 'ca' ? '/ca' : ''}/aviso-legal">{t('footerLegal')}</a>
+      <a href="{lang === 'ca' ? '/ca' : ''}/politica-cookies">{t('footerCookies')}</a>
 
       {#each social as RRSS}
         <a href={RRSS.url} target="blank_">

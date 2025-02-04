@@ -1,0 +1,56 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { defaultLang, useTranslations, languageList } from '@/i18n/ui'
+
+const lang = Astro.currentLocale || defaultLang
+
+const t = useTranslations(lang as keyof typeof languageList)
+---
+
+<style lang="scss">
+  @use 'src/sass/mixins.scss' as *;
+
+  .g-wrapper {
+    margin-top: 20vh;
+
+    h1 {
+      font-size: 50px;
+      text-align: center;
+
+      @include notDesktop {
+        font-size: 30px;
+      }
+    }
+
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: var(--colorPrimary);
+      font-size: 30px;
+    }
+  }
+</style>
+
+<Layout title="Grup de suport | Política de cookies" frozen>
+  <div class="g-wrapper">
+    <h1 set:html={t('cookiesH1')} />
+
+    <div set:html={t('cookiesTextADesc')} />
+
+    <h2 set:html={t('cookiesTextBTitle')} />
+    <div set:html={t('cookiesTextBDesc')} />
+
+    <h2 set:html={t('cookiesTextCTitle')} />
+    <div set:html={t('cookiesTextCDesc')} />
+
+    <h2 set:html={t('cookiesTextDTitle')} />
+    <div set:html={t('cookiesTextDDesc')} />
+
+    <h2 set:html={t('cookiesTextETitle')} />
+    <div set:html={t('cookiesTextEDesc')} />
+
+    <h2 set:html={t('cookiesTextFTitle')} />
+    <div set:html={t('cookiesTextFDesc')} />
+  </div>
+</Layout>

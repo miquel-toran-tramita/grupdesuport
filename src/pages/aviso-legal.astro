@@ -1,0 +1,63 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { defaultLang, useTranslations, languageList } from '@/i18n/ui'
+
+const lang = Astro.currentLocale || defaultLang
+
+const t = useTranslations(lang as keyof typeof languageList)
+---
+
+<style lang="scss">
+  @use 'src/sass/mixins.scss' as *;
+
+  .g-wrapper {
+    margin-top: 20vh;
+
+    h1 {
+      font-size: 50px;
+      text-align: center;
+
+      @include notDesktop {
+        font-size: 30px;
+      }
+    }
+
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: var(--colorPrimary);
+      font-size: 30px;
+    }
+  }
+</style>
+
+<Layout title="Grup de suport | Aviso legal" frozen>
+  <div class="g-wrapper">
+    <h1 set:html={t('legalH1')} />
+
+    <h2 set:html={t('legalTextATitle')} />
+    <div set:html={t('legalTextADesc')} />
+
+    <h2 set:html={t('legalTextBTitle')} />
+    <div set:html={t('legalTextBDesc')} />
+
+    <h2 set:html={t('legalTextCTitle')} />
+    <div set:html={t('legalTextCDesc')} />
+
+    <h2 set:html={t('legalTextDTitle')} />
+    <div set:html={t('legalTextDDesc')} />
+
+    <h2 set:html={t('legalTextETitle')} />
+    <div set:html={t('legalTextEDesc')} />
+
+    <h2 set:html={t('legalTextFTitle')} />
+    <div set:html={t('legalTextFDesc')} />
+
+    <h2 set:html={t('legalTextGTitle')} />
+    <div set:html={t('legalTextGDesc')} />
+
+    <h2 set:html={t('legalTextHTitle')} />
+    <div set:html={t('legalTextHDesc')} />
+  </div>
+</Layout>

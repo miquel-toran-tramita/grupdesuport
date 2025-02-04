@@ -31,7 +31,7 @@
   }
 </style>
 
-<div class="tarifas">
+<div class="tarifas" id="contacto">
   <h2 class="g-title g-wrapper">{t('pricesTitle')}</h2>
   <div class="g-mini-wrapper">
     <div class="text">

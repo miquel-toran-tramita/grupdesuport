@@ -46,22 +46,22 @@
 
       &.animation-four {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 70vh + 280px)) translateX(100%) rotateZ(-20deg); //initial + firsText + testimonals + servicesHeight/2
+        transform: translateY(calc(25vh + 400px + 70vh + 310px)) translateX(100%) rotateZ(-20deg); //initial + firsText + testimonals + servicesHeight/2
       }
 
       &.animation-five {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 70vh + 280px + 440px)) translateX(0%) rotateZ(0deg);
+        transform: translateY(calc(25vh + 400px + 70vh + 310px + 460px)) translateX(0%) rotateZ(0deg);
       }
 
       &.animation-six {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 70vh + 280px + 440px + 350px)) translateX(-70%) rotateZ(30deg);
+        transform: translateY(calc(25vh + 400px + 70vh + 310px + 460px + 350px)) translateX(-70%) rotateZ(30deg);
       }
 
       &.animation-seven {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 70vh + 280px + 440px + 350px + 920px)) translateX(0%) rotateZ(0deg);
+        transform: translateY(calc(25vh + 400px + 70vh + 310px + 460px + 350px + 920px)) translateX(0%) rotateZ(0deg);
       }
     }
   }
@@ -79,6 +79,6 @@
   }
 </style>
 
-<img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="230px" loading="lazy" />
+<img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="250px" height="141" loading="lazy" />
 
 <svelte:window on:scroll={handleScroll} />

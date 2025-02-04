@@ -1,5 +1,5 @@
 ---
-import Menu from '@/components/essentials/menus/Menu.svelte'
+import Analytics from '@vercel/analytics/astro'
 import Footer from '@/components/Footer.svelte'
 import MenuBasic from '@/components/MenuBasic.svelte'
 import { defaultLang } from '@/i18n/ui'
@@ -7,7 +7,7 @@ import { defaultLang } from '@/i18n/ui'
 const lang = Astro.currentLocale || defaultLang
 export interface Props {
   title: string
-  frozen: boolean
+  frozen?: boolean
 }
 
 const props = Astro.props
@@ -22,7 +22,7 @@ const frozen = props.frozen
     <meta name="description" content="Astro description" />
     <meta name="view-transition" content="same-origin" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/pluma.webp" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
@@ -32,11 +32,12 @@ const frozen = props.frozen
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <Analytics />
     <MenuBasic {lang} client:load {frozen} />
 
     <slot />
 
-    <Footer />
+    <Footer {lang} />
 
     <style lang="scss" is:global>
       @use '@/sass/global.scss';
