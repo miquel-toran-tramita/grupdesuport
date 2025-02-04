@@ -1,40 +1,19 @@
 <script lang="ts">
   import InfiniteLoop from '@/components/InfiniteLoop.svelte'
   import SliderX from '../SliderX.svelte'
+  import Opinion from '../Opinion.svelte'
 
   const testimonials = [
     {
-      title: '¡Una tranquilidad absoluta!',
+      title: 'Servicio fiable y personalizado',
       opinion:
-        'Gracias a esta gestoría, puedo centrarme en hacer crecer mi negocio mientras ellos se encargan de toda la parte fiscal y contable.',
-      name: 'Rosa Pérez',
-      business: 'Floristería "El Ramo Ideal"',
+        '<p>Soy cliente de Grup de Suport desde hace muchos años y siempre he valorado su servicio fiable y su experiencia. </p> <p>Me han ayudado mucho a gestionar mi contabilidad personal y empresarial, así como los asuntos relacionados con los impuestos. </p></p>Los recomendaría con total confianza a cualquiera que busque un servicio fiable y personalizado.</p>',
+      name: 'Boris Venkov',
     },
     {
       title: 'Eficiencia garantizada',
-      opinion: 'Nunca pensé que cumplir con Hacienda y optimizar mis finanzas podría ser tan sencillo. ¡Totalmente recomendados!',
-      name: 'Aitor Gutiérrez',
-      business: 'Empresa de Fletes y Mudanzas',
-    },
-    {
-      title: 'Un servicio impecable',
-      opinion: 'Su asesoramiento contable y fiscal es mejor que cualquier otro servicio que he probado. ¡De 10!',
-      name: 'Elsa Montes',
-      business: 'Academia de Natación "La Laguna"',
-    },
-    {
-      title: 'Un cambio radical',
-      opinion:
-        'Desde que confío en esta gestoría, mi empresa está más organizada y mis números mejor gestionados. No puedo estar más satisfecho.',
-      name: 'Benito Hernández',
-      business: 'Fábrica de Ventiladores Industriales',
-    },
-    {
-      title: '¡Sin preocupaciones!',
-      opinion:
-        'Gracias a esta gestoría, ahora mis obligaciones fiscales están siempre al día, y puedo dedicarme a lo que realmente importa: mis clientes.',
-      name: 'Pepe Roni',
-      business: 'Pizzería "El Sabor del Barrio"',
+      opinion: '¡Excelente servicio siempre de Gemma, súper servicial y confiable!',
+      name: 'Simon Ankersen',
     },
   ]
 </script>
@@ -43,42 +22,25 @@
   .testimonials {
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
 
-    .testimonial {
-      height: 100%;
-      padding: 20px;
-      max-width: 300px;
+    .title {
+      font-size: 80px;
+      max-width: 500px;
+    }
 
-      .title {
-        color: var(--colorPrimary);
-        font-size: 25px;
-      }
-
-      .person {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-top: 30px;
-
-        .name,
-        .business {
-          font-size: 14px;
-        }
-
-        .name {
-          color: var(--colorPrimary);
-        }
-        color: var(--colorText2);
-      }
+    .opinions {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
   }
 </style>
 
-<div class="testimonials">
-  <SliderX>
+<div class="testimonials g-wrapper">
+  <!--<SliderX>
     {#each testimonials as testimonial}
       <div class="testimonial">
         <span class="title">{testimonial.title}</span>
@@ -92,5 +54,13 @@
         </div>
       </div>
     {/each}
-  </SliderX>
+  </SliderX>-->
+
+  <h3 class="title">Que dicen los clientes que cuentan con nosotros...</h3>
+
+  <div class="opinions">
+    {#each testimonials as t}
+      <Opinion text={t.opinion} name={t.name} />
+    {/each}
+  </div>
 </div>
