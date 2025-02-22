@@ -1,1 +1,1 @@
-export type Endpoints = '/api/chatgpt'
+export type Endpoints = '/api/lead'

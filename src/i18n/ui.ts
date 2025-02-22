@@ -10,14 +10,14 @@ export const texts = {
     heroTitle: '¿Y si estás enfocando mal el problema?',
     heroSubtitle: 'Gestoría contable, fiscal y laboral',
     firstText:
-      '<p>Muchas veces nos enfocamos en ganar más dinero, pero es igual o más importante <b> perder menos</b>.</p><p>Y sin hablar de dinero, ¿Qué pasa si Hacienda llama a tu puerta por no hacer las cosas bien?</p><p>Una contabilidad básica, te entrega números a final de año, y nada más.</p><p>Una contabilidad <b>bien gestionada</b> te da una red de seguridad y unos cimientos sólidos para seguir creciendo de la mejor forma posible. <br/><p>A ver, <span class="g-color">si estabas enfocando bien el problema</span>, tus energías deben estar en ganar más, pero solamente cuando la parte contable y fiscal está en buenas manos.</p><p>Si esto resuena contigo, ya hay personas que tienen en cuenta sus cuentas.<br/> <b>Sigue leyendo.</b></p>',
-    servicesTitle: '¿Qué hacemos exactamente?',
+      '<p>Muchas veces nos pensamos en ganar más dinero, pero es igual o más importante <b> perder menos</b>.</p><p>Y sin hablar de dinero, ¿Qué pasa si Hacienda llama a tu puerta por no hacer las cosas bien?</p><p>Una contabilidad básica, te entrega números a final de año, y nada más.</p><p>Una contabilidad <b>bien gestionada</b> te da una red de seguridad y unos cimientos sólidos para seguir creciendo de la mejor forma posible. <br/><p>A ver, <span class="g-color">si estabas enfocando bien el problema</span>, tus energías deben estar en ganar más, pero solamente cuando la parte contable y fiscal está en buenas manos.</p><p>Si esto resuena contigo, ya hay personas que tienen en cuenta sus cuentas.<br/> <b>Sigue leyendo.</b></p>',
+    servicesTitle: '¿En qué estamos especializados?',
     servicesA: 'Facturación y pagos',
     servicesB: 'Configuración y Asesoría Tecnológica',
     servicesC: 'Conciliaciones y Registros Contables',
     servicesD: 'Presentaciones y Obligaciones Legales',
     servicesE: 'Informes y Estados Financieros',
-    howWeWorkTitle: '¿Cómo trabajamos?',
+    howWeWorkTitle: '¿Que valores nos representan?',
     howWeWorkATitle: 'Con confianza',
     howWeWorkADescription:
       'No queremos ocultar nada, porque nos gusta pensar que empezamos a vivir en una nueva época en la que ya nadie podrá esconder sus tropelías.',
@@ -35,7 +35,7 @@ export const texts = {
     pricesTitle: 'Queremos empatizar con tu situación y buscar el bien común',
     pricesText:
       '<p>Nos gusta ofrecer una comunicación fluida, cercana y honesta, por eso mismo no podemos darte un precio sin conocer tu situación.</p><p>Haz click en el botón de abajo y hablaremos sobre cuestiones como:</p><p>Que pasa si eres autónomo o pyme, si tu proyecto está en perdidas, si tiene menos de un año de vida o qué servicios necesitas.</p>',
-    pricesCTA: 'Concertar una cita',
+    pricesCTA: 'Pedir más información',
     contactFormTitle: 'Formulario de contacto',
     contactFormInputName: 'Nombre y apellidos',
     contactFormInputEmail: 'Correo electrónico',
@@ -284,7 +284,7 @@ export const texts = {
     pricesTitle: 'Volem empatitzar amb la teva situació i buscar el bé comú',
     pricesText:
       '<p>Ens agrada oferir una comunicació fluïda, propera i honesta, per això mateix no podem donar-te un preu sense conèixer la teva situació.</p><p>Fes clic al botó de sota i parlarem sobre qüestions com:</p><p>Què passa si ets autònom o pime, si el teu projecte està en pèrdues, si té menys d’un any de vida o quins serveis necessites.</p>',
-    pricesCTA: 'Concertar una cita',
+    pricesCTA: 'Pedir más información',
     contactFormTitle: 'Formulari de contacte',
     contactFormInputName: 'Nom i cognoms',
     contactFormInputEmail: 'Correu electrònic',

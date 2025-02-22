@@ -29,7 +29,7 @@ export const api: IApi = {
         data: cType && cType.includes('application/json') ? await response.json() : await response.text(),
       }
     } catch (err) {
-      console.log('❌ Error: ', err)
+      console.info('❌ Error: ', err)
     }
   },
 

@@ -19,12 +19,24 @@
 </script>
 
 <style lang="scss">
+  @use 'src/sass/mixins.scss' as *;
   .testimonials {
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
+
+    @include notDesktop {
+      flex-direction: column;
+      gap: 30px;
+      padding: 50px 0;
+
+      .title {
+        font-size: 30px !important;
+        text-align: center;
+      }
+    }
 
     .title {
       font-size: 80px;

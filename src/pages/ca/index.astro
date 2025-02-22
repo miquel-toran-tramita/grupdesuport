@@ -1,4 +1,6 @@
 ---
+export const prerender = true
+
 import Layout from '@/layouts/Layout.astro'
 import Pluma from '@/components/Pluma.svelte'
 import Tarifas from '@/components/sections/Tarifas.svelte'
@@ -115,5 +117,5 @@ const t = useTranslations(lang as keyof typeof languageList)
 
   <Testimonials client:visible />
   <Servicios {lang} />
-  <Tarifas {lang} />
+  <Tarifas {lang} client:visible />
 </Layout>

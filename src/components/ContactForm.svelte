@@ -58,17 +58,17 @@
 
     if (!errors.includes(true)) {
       loading = true
-      const result = await fetch('/api/lead', {
+      const result = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          access_key: 'a76f8f87-0b3f-47a9-95a2-9b1f920deece',
           name: data.name.value,
           email: data.email.value,
           phone: data.phone.value,
           message: data.message.value,
-          context,
         }),
       })
 

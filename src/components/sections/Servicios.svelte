@@ -146,8 +146,8 @@
   }
 
   .valores-container {
-    margin-top: 300px;
     @include desktop {
+      margin-top: 300px;
       .g-box:nth-child(2) {
         order: -1;
       }
