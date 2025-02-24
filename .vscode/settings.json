@@ -9,5 +9,6 @@
   },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+  "postman.settings.dotenv-detection-notification-visibility": false
 }

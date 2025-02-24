@@ -7,10 +7,17 @@ export const texts = {
     menuServices: 'Servicios',
     menuTeam: 'Nosotros',
     menuContact: 'Contacto',
-    heroTitle: '¿Y si estás enfocando mal el problema?',
+    heroTitle: 'Tu negocio necesita un respiro',
     heroSubtitle: 'Gestoría contable, fiscal y laboral',
-    firstText:
-      '<p>Muchas veces nos pensamos en ganar más dinero, pero es igual o más importante <b> perder menos</b>.</p><p>Y sin hablar de dinero, ¿Qué pasa si Hacienda llama a tu puerta por no hacer las cosas bien?</p><p>Una contabilidad básica, te entrega números a final de año, y nada más.</p><p>Una contabilidad <b>bien gestionada</b> te da una red de seguridad y unos cimientos sólidos para seguir creciendo de la mejor forma posible. <br/><p>A ver, <span class="g-color">si estabas enfocando bien el problema</span>, tus energías deben estar en ganar más, pero solamente cuando la parte contable y fiscal está en buenas manos.</p><p>Si esto resuena contigo, ya hay personas que tienen en cuenta sus cuentas.<br/> <b>Sigue leyendo.</b></p>',
+    firstText: `
+      <p>Lidiar con impuestos, nóminas y contabilidad puede ser un dolor de cabeza.<br/> Sabemos que prefieres centrarte en hacer crecer tu negocio, y para eso estamos aquí.</p>
+      <br/>
+      <p>Una contabilidad básica, te entrega números a final de año, y nada más.</p>
+      <p>Una <b><span class="g-color">contabilidad ligera</span></b> te da una red de seguridad y unos cimientos sólidos para seguir creciendo de la mejor forma posible.<br/>
+      <br/>
+
+      <p>Si quieres despreocuparte de los números...<br> <b>Sigue leyendo</b> y te contamos más.</p>
+    `,
     servicesTitle: '¿En qué estamos especializados?',
     servicesA: 'Facturación y pagos',
     servicesB: 'Configuración y Asesoría Tecnológica',
@@ -34,7 +41,7 @@ export const texts = {
       'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos y una provechosa colaboración con nuestros clientes.',
     pricesTitle: 'Queremos empatizar con tu situación y buscar el bien común',
     pricesText:
-      '<p>Nos gusta ofrecer una comunicación fluida, cercana y honesta, por eso mismo no podemos darte un precio sin conocer tu situación.</p><p>Haz click en el botón de abajo y hablaremos sobre cuestiones como:</p><p>Que pasa si eres autónomo o pyme, si tu proyecto está en perdidas, si tiene menos de un año de vida o qué servicios necesitas.</p>',
+      '<p>Nos gusta ofrecer una comunicación fluida, cercana y honesta, por eso mismo no podemos darte un precio sin conocer tu situación.</p><p><b>Haz click</b> en el botón de abajo y hablaremos sobre cuestiones como:</p><p>Que pasa si eres autónomo o pyme, si tu proyecto está en perdidas, si tiene menos de un año de vida o qué servicios necesitas.</p>',
     pricesCTA: 'Pedir más información',
     contactFormTitle: 'Formulario de contacto',
     contactFormInputName: 'Nombre y apellidos',
