@@ -68,7 +68,7 @@
     {/each}
   </SliderX>-->
 
-  <h3 class="title">Que dicen los clientes que cuentan con nosotros...</h3>
+  <h3 class="title">Qué dicen los clientes que ya cuentan con nosotros...</h3>
 
   <div class="opinions">
     {#each testimonials as t}
