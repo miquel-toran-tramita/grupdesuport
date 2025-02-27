@@ -56,6 +56,8 @@ const teamMembers: ITeamMember[] = [
       img {
         object-fit: cover;
         padding: 0;
+        width: 100%;
+        max-width: 400px;
       }
 
       .desc {
@@ -96,6 +98,8 @@ const teamMembers: ITeamMember[] = [
 
       <div class="first-block">
         <div class="desc g-box" set:html={t('teamBigDescription')} />
+
+        <img class="g-box" src="/assets/team/team.jpg" alt="team" />
       </div>
     </div>
     <h2 class="g-box">{t('teamH2')}</h2>
