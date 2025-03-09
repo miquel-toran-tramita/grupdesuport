@@ -1,19 +1,20 @@
 <script lang="ts">
-  import InfiniteLoop from '@/components/InfiniteLoop.svelte'
-  import SliderX from '../SliderX.svelte'
   import Opinion from '../Opinion.svelte'
 
   const testimonials = [
     {
-      title: 'Servicio fiable y personalizado',
       opinion:
         '<p>Soy cliente de Grup de Suport desde hace muchos años y siempre he valorado su servicio fiable y su experiencia. </p> <p>Me han ayudado mucho a gestionar mi contabilidad personal y empresarial, así como los asuntos relacionados con los impuestos. </p></p>Los recomendaría con total confianza a cualquiera que busque un servicio fiable y personalizado.</p>',
       name: 'Boris Venkov',
     },
     {
-      title: 'Eficiencia garantizada',
-      opinion: '¡Excelente servicio siempre de Gemma, súper servicial y confiable!',
+      opinion: '<p>¡Excelente servicio siempre de Gemma, súper servicial y confiable! </p>',
       name: 'Simon Ankersen',
+    },
+    {
+      opinion:
+        '<p>Tras más de 10 años contando con los servicios de Grup de Suport, puedo garantizar que es una gestoría extraordinaria. </p> <p>Cuenta con un equipo altamente cualificado, dedicado, serio,<br/> con mucha experiencia - <br/>y además es muy buena gente. </p> <p>Sus tarifas son muy razonables y el trato siempre ha sido un 10 tanto a nivel profesional como personal.</p>  <p>¡Recomiendo 100%!</p>',
+      name: 'Charlotte',
     },
   ]
 </script>
@@ -24,7 +25,8 @@
     position: relative;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
+    padding: 70px 0;
     min-height: 100vh;
 
     @include notDesktop {
@@ -39,6 +41,8 @@
     }
 
     .title {
+      position: sticky;
+      top: 60px;
       font-size: 80px;
       max-width: 500px;
     }
@@ -52,22 +56,6 @@
 </style>
 
 <div class="testimonials g-wrapper">
-  <!--<SliderX>
-    {#each testimonials as testimonial}
-      <div class="testimonial">
-        <span class="title">{testimonial.title}</span>
-        <p class="opinion">
-          {@html testimonial.opinion}
-        </p>
-
-        <div class="person">
-          <span class="name">{testimonial.name}</span>
-          <span class="business">{testimonial.business}</span>
-        </div>
-      </div>
-    {/each}
-  </SliderX>-->
-
   <h3 class="title">Qué dicen los clientes que ya cuentan con nosotros...</h3>
 
   <div class="opinions">

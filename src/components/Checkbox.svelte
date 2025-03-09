@@ -34,7 +34,7 @@
       margin: 0;
       width: 25px;
       height: 25px;
-      border-radius: 4px;
+      border-radius: 8px;
       box-shadow: var(--shadowInset);
       border: 1px solid var(--colorBorder);
       flex-shrink: 0;

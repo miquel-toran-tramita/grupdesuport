@@ -11,7 +11,8 @@
     if (window.scrollY > vh100 * 1.8) move = 'animation-four'
     if (window.scrollY > vh100 * 2.4) move = 'animation-five'
     if (window.scrollY > vh100 * 2.8) move = 'animation-six'
-    if (window.scrollY > vh100 * 3.2) move = 'animation-seven'
+    if (window.scrollY > vh100 * 3.7) move = 'animation-seven'
+    if (window.scrollY > vh100 * 4) move = 'animation-eight'
   }
 </script>
 
@@ -29,39 +30,53 @@
     }
 
     @include desktop {
+      $a1: 25vh;
+      $a2: 400px;
+      $a3: 83vh;
+      $a4: 580px;
+      $a5: 360px;
+      $a6: 430px;
+      $a7: 660px;
+      $a8: 570px;
+
       &.animation-one {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(25vh) translateX(180%) rotateZ(-20deg);
+        transform: translateY($a1) translateX(180%) rotateZ(-20deg);
       }
 
       &.animation-two {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px)) translateX(180%) rotateZ(-40deg);
+        transform: translateY(calc($a1 + $a2)) translateX(180%) rotateZ(-40deg);
       }
 
       &.animation-three {
         transition: 5s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 83vh)) translateX(-230%) rotateZ(40deg);
+        transform: translateY(calc($a1 + $a2 + $a3)) translateX(-230%) rotateZ(40deg);
       }
 
       &.animation-four {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 100vh + 310px)) translateX(100%) rotateZ(-20deg); //initial + firsText + testimonals + servicesHeight/2
+        transform: translateY(calc($a1 + $a2 + $a3 + $a4)) translateX(190%) rotateZ(-30deg); //initial + firsText + testimonals + servicesHeight/2
       }
 
       &.animation-five {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 100vh + 310px + 460px)) translateX(0%) rotateZ(0deg);
+        transform: translateY(calc($a1 + $a2 + $a3 + $a4 + $a5)) translateX(0%) rotateZ(0deg);
       }
 
       &.animation-six {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 100vh + 310px + 460px + 350px)) translateX(-70%) rotateZ(30deg);
+        transform: translateY(calc($a1 + $a2 + $a3 + $a4 + $a5 + $a6)) translateX(0%) rotateZ(0deg);
       }
 
       &.animation-seven {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
-        transform: translateY(calc(25vh + 400px + 100vh + 310px + 460px + 350px + 920px)) translateX(0%) rotateZ(0deg);
+        transform: translateY(calc($a1 + $a2 + $a3 + $a4 + $a5 + $a6 + $a7)) translateX(-200%) rotateZ(20deg);
+      }
+
+      &.animation-eight {
+        transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);
+        transform: translateY(calc($a1 + $a2 + $a3 + $a4 + $a5 + $a6 + $a7 + $a8)) translateX(0%) rotateZ(0deg);
       }
     }
   }
@@ -79,6 +94,6 @@
   }
 </style>
 
-<img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="250px" height="141" loading="lazy" />
+<img id="pluma" class={move} src="/assets/pluma.webp" alt="pluma" width="250px" height="141px" loading="lazy" />
 
 <svelte:window on:scroll={handleScroll} />
