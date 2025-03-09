@@ -18,6 +18,7 @@ export const texts = {
 
       <p>Si quieres despreocuparte de los números...<br> <b>Sigue leyendo</b> y te contamos más.</p>
     `,
+    testimonials: 'Qué dicen los clientes que ya cuentan con nosotros...',
     servicesTitle: '¿En qué estamos especializados?',
     servicesA: 'Facturación y pagos',
     servicesB: 'Configuración y Asesoría Tecnológica',
@@ -263,25 +264,33 @@ export const texts = {
     menuServices: 'Serveis',
     menuTeam: 'Nosaltres',
     menuContact: 'Contacte',
-    heroTitle: 'I si estàs enfocant malament el problema?',
+    heroTitle: 'El teu negoci necessita un respir',
     heroSubtitle: 'Gestoria comptable, fiscal i laboral',
-    firstText:
-      '<p>Moltes vegades ens enfoquem a guanyar més diners, però és igual o més important <b> perdre menys</b>.</p><p>I sense parlar de diners, què passa si Hisenda truca a la teva porta per no fer les coses bé?</p><p>Una comptabilitat bàsica, et dóna números a final d’any, i res més.</p><p>Una comptabilitat <b>ben gestionada</b> et proporciona una xarxa de seguretat i uns fonaments sòlids per continuar creixent de la millor manera possible. <br/><p>A veure, <span class="g-color">si estaves enfocant bé el problema</span>, les teves energies han d’estar a guanyar més, però només quan la part comptable i fiscal està en bones mans.</p><p>Si això ressona amb tu, ja hi ha persones que tenen en compte els seus comptes.<br/> <b>Segueix llegint.</b></p>',
-    servicesTitle: 'Què fem exactament?',
+    firstText: `
+      <p>Lidiar amb impostos, nòmines i comptabilitat pot ser un maldecap.<br/> Sabem que prefereixes centrar-te en fer créixer el teu negoci, i per això som aquí.</p>
+      <br/>
+      <p>Una comptabilitat bàsica et dona números a final d’any, i res més.</p>
+      <p>Una <b><span class="g-color">comptabilitat lleugera</span></b> et proporciona una xarxa de seguretat i uns fonaments sòlids per seguir creixent de la millor manera possible.<br/>
+      <br/>
+
+      <p>Si vols despreocupar-te dels números...<br> <b>Segueix llegint</b> i t’ho expliquem tot.</p>
+    `,
+    testimonials: 'Què diuen els clients que ja compten amb nosaltres...',
+    servicesTitle: 'En què estem especialitzats?',
     servicesA: 'Facturació i pagaments',
     servicesB: 'Configuració i Assessorament Tecnològic',
     servicesC: 'Conciliacions i Registres Comptables',
     servicesD: 'Presentacions i Obligacions Legals',
     servicesE: 'Informes i Estats Financers',
-    howWeWorkTitle: 'Com treballem?',
+    howWeWorkTitle: 'Quins valors ens representen?',
     howWeWorkATitle: 'Amb confiança',
     howWeWorkADescription:
-      'No volem amagar res, perquè ens agrada pensar que comencem a viure en una nova època en què ningú podrà amagar les seves malifetes.',
+      'No volem amagar res, perquè ens agrada pensar que estem entrant en una nova era on ningú podrà ocultar les seves males pràctiques.',
     howWeWorkBTitle: 'Amb innovació',
     howWeWorkBDescription: 'La comptabilitat i els papers són cosa del passat.',
     howWeWorkCTitle: 'Amb sostenibilitat',
     howWeWorkCDescription:
-      'No només ecològica. Volem i podem mesurar l’impacte de la nostra activitat i també el del vostre negoci si així ens ho sol·liciteu.',
+      'No només ecològica. Volem i podem mesurar l’impacte de la nostra activitat i també la del vostre negoci si així ens ho demaneu.',
     howWeWorkDTitle: 'Amb solidaritat',
     howWeWorkDDescription:
       'Perquè creiem que els projectes col·lectius o individuals de les persones emprenedores poden aportar tant a la societat com ho fan els subsidis de l’Estat.',
@@ -290,33 +299,33 @@ export const texts = {
       'Internament garantint un tracte equitatiu amb tots els membres de la nostra organització i externament procurant mantenir uns preus justos i una col·laboració profitosa amb els nostres clients.',
     pricesTitle: 'Volem empatitzar amb la teva situació i buscar el bé comú',
     pricesText:
-      '<p>Ens agrada oferir una comunicació fluïda, propera i honesta, per això mateix no podem donar-te un preu sense conèixer la teva situació.</p><p>Fes clic al botó de sota i parlarem sobre qüestions com:</p><p>Què passa si ets autònom o pime, si el teu projecte està en pèrdues, si té menys d’un any de vida o quins serveis necessites.</p>',
-    pricesCTA: 'Pedir más información',
+      '<p>Ens agrada oferir una comunicació fluida, propera i honesta, per això mateix no podem donar-te un preu sense conèixer la teva situació.</p><p><b>Fes clic</b> al botó de sota i parlarem sobre qüestions com:</p><p>Què passa si ets autònom o pime, si el teu projecte està en pèrdues, si té menys d’un any de vida o quins serveis necessites.</p>',
+    pricesCTA: 'Demanar més informació',
     contactFormTitle: 'Formulari de contacte',
     contactFormInputName: 'Nom i cognoms',
     contactFormInputEmail: 'Correu electrònic',
     contactFormInputPhone: 'Telèfon',
     contactFormInputMsg: 'Missatge',
-    contactFormTandC: 'Accepto la <a href="/politica-privacidad">política de privacitat i rebre un contacte amb finalitats comercials</a>',
+    contactFormTandC: 'Accepto la <a href="/politica-privacitat">política de privacitat i rebre un contacte amb finalitats comercials</a>',
     footerCookies: 'Política de cookies',
     footerLegal: 'Avís legal',
     teamH1: 'Aquesta és la nostra història',
-    teamH2: 'Coneix qui portarà els teus comptes',
+    teamH2: 'Coneix qui et portarà els comptes',
     teamFrancescTitle: 'Soci col·laborador',
     teamFrancescDesc:
-      '<p>Sóc nascut a Sabadell però visc entre Barcelona i Sant Joan de les Abadesses, que és el poble d’on prové part de la meva família i on tinc l’hort.</p> <p> Als 23 anys em vaig llicenciar en Història Medieval a la UAB.</p><p> Des de llavors treballo a Majoral, on he tingut el privilegi de viure i participar en l’experiència d’un projecte empresarial extraordinari.</p><p> He fet cursos a la UOC per aquelles assignatures de Ciències Empresarials que més m’interessaven.</p>',
+      '<p>Vaig néixer a Sabadell però visc entre Barcelona i Sant Joan de les Abadesses, que és el poble d’on prové part de la meva família i on tinc l’hort.</p> <p>Als 23 anys em vaig llicenciar en Història Medieval a la UAB.</p><p>Des de llavors he treballat a Majoral, on he tingut el privilegi de viure i participar en l’experiència d’un projecte empresarial extraordinari.</p><p>He fet recorreguts a la UOC per aquelles assignatures de Ciències Empresarials que més m’interessaven.</p>',
     teamFrancescStudies: 'Història Medieval a la UAB <br/>',
     teamToniTitle: 'Soci treballador',
     teamToniDesc:
-      '<p>Nascut a Barcelona de família aragonesa. Màster en Direcció i Administració d’Empreses per l’EAE i Tècnic en Control de Gestió pel CEF. </p><p>Sempre he treballat en l’àrea comptable i de control en empreses de diversos sectors, per la qual cosa disposo d’una àmplia experiència com a controller i comptable, tant general com analític. Sóc amant de la natura, molt aficionat a la música ... i les travesses.</p>',
+      '<p>Vaig néixer a Barcelona en una família aragonesa. Màster en Direcció i Administració d’Empreses per l’EAE i Tècnic en Control de Gestió pel CEF.</p><p>Sempre he treballat en l’àrea comptable i de control en empreses de diversos sectors, per la qual cosa tinc una àmplia experiència com a controller i comptable, tant general com analític. Sóc amant de la natura, molt aficionat a la música ... i a les travesses.</p>',
     teamToniStudies: '',
     teamGemmaTitle: 'Sòcia col·laboradora',
-    teamGemmaDesc: `<p>Nascuda a Barcelona, filla de pare de Sant Andreu i mare d’Arbeca (Lleida), actualment visc a Badalona.</p><p> Sóc diplomada en Ciències Empresarials per la UB.</p><p> Porto més de vint-i-cinc anys treballant com a comptable i sóc especialista en fiscalitat general, incloent-hi també la dels residents comunitaris i no comunitaris.</p>`,
+    teamGemmaDesc: `<p>Vaig néixer a Barcelona, filla de pare de Sant Andreu i mare d’Arbeca (Lleida), i actualment visc a Badalona.</p><p>Sóc diplomada en Ciències Empresarials per la UB.</p><p>Porto més de vint-i-cinc anys treballant com a comptable i sóc especialista en fiscalitat general, incloent també la dels residents comunitaris i no comunitaris.</p>`,
     teamGemmaStudies: '',
     teamJordiTitle: 'Soci treballador',
-    teamJordiDesc: `<p>Nascut i resident a Lleida, fill de pare del Pallars Sobirà i mare del Pla d’Urgell.</p><p> Sóc diplomat en Ciències Empresarials per la UdL.</p><p> Tinc el Certificat d’Aptitud Pedagògica i actualment he cursat una especialització en economia social i solidària a la Universitat de Lleida.</p><p> Des de sempre he treballat en l’àrea comptable i fiscal, primer en un grup de franquícies del sector de l’hostaleria i actualment en una empresa del camp de la il·luminació.</p>`,
+    teamJordiDesc: `<p>Vaig néixer i visc a Lleida, fill de pare del Pallars Sobirà i mare del Pla d’Urgell.</p><p>Sóc diplomat en Ciències Empresarials per la UdL.</p><p>Tinc el Certificat d’Aptitud Pedagògica i actualment he cursat una especialització en economia social i solidària a la Universitat de Lleida.</p><p>Des de sempre he treballat en l’àrea comptable i fiscal, primer en un grup de franquícies del sector de l’hostaleria i actualment en una empresa del sector de la il·luminació.</p>`,
     teamJordiStudies: '',
-    teamBigDescription: `<p>La idea de fundar Grup de Suport sorgeix arran de l’última crisi econòmica.</p><p> Moltes petites i mitjanes empreses es veuen en la necessitat de reduir estructura i nombrosos professionals de la comptabilitat es queden sense feina. Alguns queden fora del mercat laboral i altres troben treball en precari com a autònoms. </p><p>Grup de Suport adopta la forma jurídica de cooperativa i ofereix cobertura en el Règim General per als seus membres, així com un conjunt de serveis de màrqueting i eines de programari que permeten als seus membres treballar amb dignitat i utilitzant la tecnologia més avançada.</p><p> Grup de Suport s’ofereix a aquestes mateixes empreses que amb la crisi es van veure obligades a introduir canvis en la seva gestió, molts d’ells amb conseqüències dramàtiques. Els ofereix els seus serveis a costos raonables: comptabilitat, assessorament fiscal, laboral i tot tipus de serveis de suport a les empreses.</p>`,
+    teamBigDescription: `<p>La idea de fundar Grup de Suport sorgeix arran de l’última crisi econòmica.</p><p>Moltes petites i mitjanes empreses es veuen obligades a reduir estructura i nombrosos professionals de la comptabilitat es queden sense feina. Alguns queden fora del mercat laboral i altres troben treball en precari com a autònoms.</p><p>Grup de Suport adopta la forma jurídica de cooperativa i ofereix cobertura en el Règim General per als seus membres, així com un conjunt de serveis de màrqueting i eines de programari que els permeten treballar amb dignitat i utilitzant la tecnologia més avançada.</p><p>Grup de Suport ofereix els seus serveis a aquestes mateixes empreses que, amb la crisi, es van veure obligades a introduir canvis en la seva gestió, molts d’ells amb conseqüències dramàtiques. Els oferim serveis a costos raonables: comptabilitat, assessorament fiscal, laboral i tot tipus de serveis de suport a les empreses.</p>`,
     legalH1: 'AVÍS LEGAL',
     legalTextATitle: 'Informació general',
     legalTextADesc: `

@@ -41,7 +41,7 @@
     }
 
     .title {
-      font-size: 80px;
+      font-size: 70px;
       padding: 0 20px;
       max-width: 500px;
 
@@ -55,8 +55,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
       gap: 30px;
+
+      @include notDesktop {
+        width: 100%;
+      }
     }
   }
 </style>
