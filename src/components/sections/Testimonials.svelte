@@ -41,15 +41,21 @@
     }
 
     .title {
-      position: sticky;
-      top: 60px;
       font-size: 80px;
+      padding: 0 20px;
       max-width: 500px;
+
+      @include desktop {
+        position: sticky;
+        top: 60px;
+      }
     }
 
     .opinions {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      width: 100%;
       gap: 30px;
     }
   }
