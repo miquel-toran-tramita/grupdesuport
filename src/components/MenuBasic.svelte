@@ -145,6 +145,7 @@
           .item {
             color: var(--colorText3);
             transition: 0.2s ease;
+            font-size: 18px;
 
             &.cita {
               text-decoration: underline;

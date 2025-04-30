@@ -38,7 +38,7 @@ export const texts = {
     howWeWorkDDescription: 'Nada de plantillas ni robots automatizados.<br/><br/> Estamos contigo como un compañero más de tu empresa.',
     howWeWorkETitle: 'Con justicia',
     howWeWorkEDescription:
-      'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos y una provechosa colaboración con nuestros clientes.',
+      'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos.',
     pricesTitle: 'Nos ponemos en tu lugar para encontrar una solución justa',
     pricesText: `
         <p>Creemos en una comunicación honesta, cercana y directa. Por eso, no te daremos un precio cerrado sin antes conocer tu situación.</p>
@@ -296,7 +296,7 @@ export const texts = {
     howWeWorkDDescription: 'Res de plantilles ni robots automatitzats.<br/><br/> Estem amb tu com un company més de la teva empresa.',
     howWeWorkETitle: 'Amb justícia',
     howWeWorkEDescription:
-      'Internament garantint un tracte equitatiu amb tots els membres de la nostra organització i externament procurant mantenir uns preus justos i una col·laboració profitosa amb els nostres clients.',
+      'Internament garantint un tracte equitatiu amb tots els membres de la nostra organització i externament procurant mantenir uns preus justos.',
     pricesTitle: 'Ens posem al teu lloc per trobar una solució justa',
     pricesText: `
         <p>Creiem en una comunicació honesta, propera i directa. Per això, no et donarem un preu tancat sense conèixer abans la teva situació.</p>

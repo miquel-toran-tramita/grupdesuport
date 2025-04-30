@@ -37,7 +37,7 @@
       $a5: 360px;
       $a6: 430px;
       $a7: 660px;
-      $a8: 570px;
+      $a8: 650px;
 
       &.animation-one {
         transition: 3s cubic-bezier(0.5, 0.4, 0.6, 1);

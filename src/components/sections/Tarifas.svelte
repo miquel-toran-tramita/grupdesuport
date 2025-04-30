@@ -26,6 +26,19 @@
     }
   }
 
+  .logo {
+    text-align: center;
+    padding-bottom: 50px;
+
+    .title {
+      font-size: 30px;
+    }
+
+    .desc {
+      color: var(--colorPrimary);
+    }
+  }
+
   .modal-content {
     padding: 20px;
   }
@@ -40,6 +53,11 @@
 
     <Button click={() => (closed = false)}>{t('pricesCTA')}</Button>
   </div>
+</div>
+
+<div class="logo">
+  <div class="title">GRUP DE SUPORT SCC</div>
+  <div class="desc">LA COMPTABILITAT LLEUGERA</div>
 </div>
 
 <Modal bind:closed>
