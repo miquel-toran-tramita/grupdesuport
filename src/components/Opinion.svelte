@@ -13,8 +13,14 @@
     max-width: 350px;
     text-align: center;
 
+    .name {
+      font-weight: bold;
+      font-size: 12px;
+      padding-bottom: 10px;
+    }
+
     .text {
-      font-size: 14px;
+      font-size: 16px;
 
       :global(p) {
         padding: 5px 0;
@@ -32,6 +38,7 @@
 </style>
 
 <div class="opinion g-box">
+  <div class="name">{name}</div>
   <div class="text">{@html text}</div>
 
   <div class="stars">

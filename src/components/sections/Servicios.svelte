@@ -178,7 +178,7 @@
         <Svg name={valor.icon} fill="var(--colorPrimary)" height="40" width="40" />
         <div class="title">{valor.title}</div>
       </div>
-      <div class="description">{valor.description}</div>
+      <div class="description">{@html valor.description}</div>
     </div>
   {/each}
 </div>

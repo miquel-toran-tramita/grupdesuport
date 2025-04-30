@@ -21,7 +21,7 @@ export const texts = {
     testimonials: 'Qué dicen los clientes que ya cuentan con nosotros...',
     servicesTitle: '¿En qué estamos especializados?',
     servicesA: 'Facturación y pagos',
-    servicesB: 'Configuración y Asesoría Tecnológica',
+    servicesB: 'Configuración y Asesoría',
     servicesC: 'Conciliaciones y Registros Contables',
     servicesD: 'Presentaciones y Obligaciones Legales',
     servicesE: 'Informes y Estados Financieros',
@@ -34,15 +34,16 @@ export const texts = {
     howWeWorkCTitle: 'Con sostenibilidad',
     howWeWorkCDescription:
       'No solamente ecológica. Queremos y podemos medir el impacto de nuestra actividad y también la de vuestro negocio si así nos lo solicitáis.',
-    howWeWorkDTitle: 'Con solidaridad',
-    howWeWorkDDescription:
-      'Porqué creemos que los proyectos colectivos o individuales de las personas emprendedoras pueden aportar tanto a la sociedad como lo hacen los subsidios del Estado.',
+    howWeWorkDTitle: 'Con cercanía',
+    howWeWorkDDescription: 'Nada de plantillas ni robots automatizados.<br/><br/> Estamos contigo como un compañero más de tu empresa.',
     howWeWorkETitle: 'Con justicia',
     howWeWorkEDescription:
       'Internamente garantizando un trato equitativo con todos los miembros de nuestra organización y externamente procurando por mantener unos precios justos y una provechosa colaboración con nuestros clientes.',
-    pricesTitle: 'Queremos empatizar con tu situación y buscar el bien común',
-    pricesText:
-      '<p>Nos gusta ofrecer una comunicación fluida, cercana y honesta, por eso mismo no podemos darte un precio sin conocer tu situación.</p><p><b>Haz click</b> en el botón de abajo y hablaremos sobre cuestiones como:</p><p>Que pasa si eres autónomo o pyme, si tu proyecto está en perdidas, si tiene menos de un año de vida o qué servicios necesitas.</p>',
+    pricesTitle: 'Nos ponemos en tu lugar para encontrar una solución justa',
+    pricesText: `
+        <p>Creemos en una comunicación honesta, cercana y directa. Por eso, no te daremos un precio cerrado sin antes conocer tu situación.</p>
+        <p><b>Haz clic</b> en el botón de abajo y cuéntanos más: si eres autónomo o pyme, si tu proyecto está empezando, si está en pérdidas o qué servicios necesitas realmente.</p>
+      `,
     pricesCTA: 'Pedir más información',
     contactFormTitle: 'Formulario de contacto',
     contactFormInputName: 'Nombre y apellidos',
@@ -278,7 +279,7 @@ export const texts = {
     testimonials: 'Què diuen els clients que ja compten amb nosaltres...',
     servicesTitle: 'En què estem especialitzats?',
     servicesA: 'Facturació i pagaments',
-    servicesB: 'Configuració i Assessorament Tecnològic',
+    servicesB: 'Configuració i Assessorament',
     servicesC: 'Conciliacions i Registres Comptables',
     servicesD: 'Presentacions i Obligacions Legals',
     servicesE: 'Informes i Estats Financers',
@@ -291,15 +292,16 @@ export const texts = {
     howWeWorkCTitle: 'Amb sostenibilitat',
     howWeWorkCDescription:
       'No només ecològica. Volem i podem mesurar l’impacte de la nostra activitat i també la del vostre negoci si així ens ho demaneu.',
-    howWeWorkDTitle: 'Amb solidaritat',
-    howWeWorkDDescription:
-      'Perquè creiem que els projectes col·lectius o individuals de les persones emprenedores poden aportar tant a la societat com ho fan els subsidis de l’Estat.',
+    howWeWorkDTitle: 'Amb calidesa',
+    howWeWorkDDescription: 'Res de plantilles ni robots automatitzats.<br/><br/> Estem amb tu com un company més de la teva empresa.',
     howWeWorkETitle: 'Amb justícia',
     howWeWorkEDescription:
       'Internament garantint un tracte equitatiu amb tots els membres de la nostra organització i externament procurant mantenir uns preus justos i una col·laboració profitosa amb els nostres clients.',
-    pricesTitle: 'Volem empatitzar amb la teva situació i buscar el bé comú',
-    pricesText:
-      '<p>Ens agrada oferir una comunicació fluida, propera i honesta, per això mateix no podem donar-te un preu sense conèixer la teva situació.</p><p><b>Fes clic</b> al botó de sota i parlarem sobre qüestions com:</p><p>Què passa si ets autònom o pime, si el teu projecte està en pèrdues, si té menys d’un any de vida o quins serveis necessites.</p>',
+    pricesTitle: 'Ens posem al teu lloc per trobar una solució justa',
+    pricesText: `
+        <p>Creiem en una comunicació honesta, propera i directa. Per això, no et donarem un preu tancat sense conèixer abans la teva situació.</p>
+        <p><b>Fes clic</b> al botó de sota i explica'ns més: si ets autònom o pime, si el teu projecte tot just comença, si està en pèrdues o quins serveis necessites realment.</p>
+      `,
     pricesCTA: 'Demanar més informació',
     contactFormTitle: 'Formulari de contacte',
     contactFormInputName: 'Nom i cognoms',

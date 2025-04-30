@@ -8,11 +8,11 @@
     if (window.scrollY > vh100 / 5) move = 'animation-one'
     if (window.scrollY > vh100 / 1.2) move = 'animation-two'
     if (window.scrollY > vh100 * 1.2) move = 'animation-three'
-    if (window.scrollY > vh100 * 1.8) move = 'animation-four'
-    if (window.scrollY > vh100 * 2.4) move = 'animation-five'
-    if (window.scrollY > vh100 * 2.8) move = 'animation-six'
-    if (window.scrollY > vh100 * 3.7) move = 'animation-seven'
-    if (window.scrollY > vh100 * 4) move = 'animation-eight'
+    if (window.scrollY > vh100 * 1.9) move = 'animation-four'
+    if (window.scrollY > vh100 * 2.8) move = 'animation-five'
+    if (window.scrollY > vh100 * 3.3) move = 'animation-six'
+    if (window.scrollY > vh100 * 4) move = 'animation-seven'
+    if (window.scrollY > vh100 * 4.6) move = 'animation-eight'
   }
 </script>
 
@@ -33,7 +33,7 @@
       $a1: 25vh;
       $a2: 400px;
       $a3: 83vh;
-      $a4: 580px;
+      $a4: 750px;
       $a5: 360px;
       $a6: 430px;
       $a7: 660px;
