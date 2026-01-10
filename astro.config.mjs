@@ -9,7 +9,7 @@ const __dirname = dirname(__filename)
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://grupdesuport.vercel.app/',
+  site: 'https://grupdesuport.com',
   integrations: [svelte(), sitemap(), robots()],
   output: 'static', // hybrid
   i18n: {
