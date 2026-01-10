@@ -279,6 +279,8 @@
           {/each}
         {/if}
       {/each}
+
+      <LanguageSelector {lang} />
     </div>
   </div>
 </div>

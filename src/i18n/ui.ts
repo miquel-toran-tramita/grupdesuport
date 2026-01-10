@@ -54,7 +54,7 @@ export const texts = {
     footerCookies: 'Política de cookies',
     footerLegal: 'Aviso legal',
     teamH1: 'Esta es nuestra historia',
-    teamH2: 'Conoce quien va a llevarte las cuentas',
+    teamH2: 'Conoce quién va a llevarte las cuentas',
     teamFrancescTitle: 'Socio colaborador',
     teamFrancescDesc:
       '<p>Soy nacido en Sabadell pero vivo entre Barcelona y San Juan de las Abadesas que es el pueblo de donde proviene parte de mi familia y donde tengo el huerto.</p> <p> A los 23 años me licencié en Historia Medieval en la UAB.</p><p> Desde entonces estoy trabajando en Majoral donde he tenido el privilegio de vivir y participar en la experiencia de un proyecto empresarial extraordinario.</p><p> He hecho recorridos en la UOC para aquellas asignaturas de Ciencias Empresariales que más me interesaban.</p>',
