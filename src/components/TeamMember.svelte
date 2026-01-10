@@ -15,7 +15,7 @@
 
     img {
       width: 100%;
-      height: 300px;
+      height: 400px;
       padding: 0;
       flex-shrink: 0;
       object-fit: cover;
