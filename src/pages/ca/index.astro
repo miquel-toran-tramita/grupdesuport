@@ -6,11 +6,13 @@ import Pluma from '@/components/Pluma.svelte'
 import Tarifas from '@/components/sections/Tarifas.svelte'
 import Testimonials from '@/components/sections/Testimonials.svelte'
 import Servicios from '@/components/sections/Servicios.svelte'
-import { defaultLang, useTranslations, languageList } from '@/i18n/ui'
+import Faqs from '@/components/Faqs.svelte'
+import { defaultLang, useTranslations, languageList, texts } from '@/i18n/ui'
 
 const lang = Astro.currentLocale || defaultLang
 
 const t = useTranslations(lang as keyof typeof languageList)
+const faqs = lang === 'ca' ? texts.ca.faqItems : texts.es.faqItems
 ---
 
 <style lang="scss">
@@ -90,7 +92,11 @@ const t = useTranslations(lang as keyof typeof languageList)
   }
 </style>
 
-<Layout title="Grup de suport | Contabilidad ">
+<Layout
+  title="Grup de Suport | Gestoria comptable, fiscal i laboral"
+  description="Gestoria comptable, fiscal i laboral per a autònoms i petites empreses. A Grup de Suport t'ajudem a gestionar els comptes i les obligacions."
+  {faqs}
+>
   <div class="hero">
     <div class="g-wrapper">
       <!--
@@ -119,4 +125,5 @@ const t = useTranslations(lang as keyof typeof languageList)
   <Testimonials />
   <Servicios {lang} />
   <Tarifas {lang} client:visible />
+  <Faqs title={t('faqTitle')} {faqs} />
 </Layout>

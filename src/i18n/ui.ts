@@ -25,6 +25,30 @@ export const texts = {
     servicesC: 'Conciliaciones y Registros Contables',
     servicesD: 'Presentaciones y Obligaciones Legales',
     servicesE: 'Informes y Estados Financieros',
+    serviceLearnMore: 'Saber más',
+    faqTitle: 'Preguntas frecuentes',
+    faqItems: [
+      {
+        title: '¿Qué servicios ofrece Grup de Suport?',
+        content:
+          'Ofrecemos servicios de facturación y pagos, configuración y asesoría, conciliaciones y registros contables, presentación de obligaciones legales e informes financieros.',
+      },
+      {
+        title: '¿A quién van dirigidos los servicios?',
+        content:
+          'Trabajamos con autónomos y pequeñas y medianas empresas. Para orientarte, cuéntanos la situación y las necesidades de tu negocio.',
+      },
+      {
+        title: '¿Cuánto cuestan los servicios?',
+        content:
+          'No damos un precio cerrado sin conocer antes cada situación. Analizamos qué servicios necesitas para proponerte una solución adecuada.',
+      },
+      {
+        title: '¿Cómo puedo pedir información?',
+        content:
+          'Puedes escribirnos mediante el formulario de contacto de la web, por correo a info@grupdesuport.com o por WhatsApp al +34 650 81 85 72.',
+      },
+    ],
     howWeWorkTitle: '¿Que valores nos representan?',
     howWeWorkATitle: 'Con confianza',
     howWeWorkADescription:
@@ -283,6 +307,30 @@ export const texts = {
     servicesC: 'Conciliacions i Registres Comptables',
     servicesD: 'Presentacions i Obligacions Legals',
     servicesE: 'Informes i Estats Financers',
+    serviceLearnMore: 'Més informació',
+    faqTitle: 'Preguntes freqüents',
+    faqItems: [
+      {
+        title: 'Quins serveis ofereix Grup de Suport?',
+        content:
+          'Oferim serveis de facturació i pagaments, configuració i assessorament, conciliacions i registres comptables, presentació d’obligacions legals i informes financers.',
+      },
+      {
+        title: 'A qui s’adrecen els serveis?',
+        content:
+          'Treballem amb autònoms i petites i mitjanes empreses. Per orientar-te, explica’ns la situació i les necessitats del teu negoci.',
+      },
+      {
+        title: 'Quant costen els serveis?',
+        content:
+          'No donem un preu tancat sense conèixer abans cada situació. Analitzem quins serveis necessites per proposar-te una solució adequada.',
+      },
+      {
+        title: 'Com puc demanar informació?',
+        content:
+          'Pots escriure’ns mitjançant el formulari de contacte del web, per correu a info@grupdesuport.com o per WhatsApp al +34 650 81 85 72.',
+      },
+    ],
     howWeWorkTitle: 'Quins valors ens representen?',
     howWeWorkATitle: 'Amb confiança',
     howWeWorkADescription:

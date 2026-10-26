@@ -34,7 +34,11 @@ const t = useTranslations(lang as keyof typeof languageList)
   }
 </style>
 
-<Layout title="Grup de suport | Aviso legal" frozen>
+<Layout
+  title="Grup de Suport | Avís legal"
+  description="Consulta la informació legal de Grup de Suport SCC, les dades de l'empresa i les condicions d'ús d'aquest lloc web."
+  frozen
+>
   <div class="g-wrapper">
     <h1 set:html={t('legalH1')} />
 

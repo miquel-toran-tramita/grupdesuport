@@ -89,7 +89,7 @@
           <span>info@grupdesuport.com</span>
         </a>
 
-        <a class="contact__phone" href="tel:+34650818572" title="+34 650 81 85 72">
+        <a class="contact__phone" href="https://wa.me/34650818572" title="+34 650 81 85 72">
           <Svg name="phone" width="25" height="25" fill="var(--colorText2)" />
           <span> 650 81 85 72</span>
         </a>

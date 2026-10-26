@@ -35,7 +35,11 @@ const t = useTranslations(lang as keyof typeof languageList)
   }
 </style>
 
-<Layout title="Grup de suport | Política de cookies" frozen>
+<Layout
+  title="Grup de Suport | Política de cookies"
+  description="Infórmate sobre el uso de cookies en el sitio web de Grup de Suport SCC y cómo puedes gestionarlas."
+  frozen
+>
   <div class="g-wrapper">
     <h1 set:html={t('cookiesH1')} />
 

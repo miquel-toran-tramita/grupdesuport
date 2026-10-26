@@ -4,7 +4,7 @@ Todo lo necesario para llevar a cabo un proyecto web de forma modular
 
 ### ⚙️ Tareas:
 
-1.  Actualizar: site: "https://www.example.com" (astro.config.mjs),
+1.  Dominio canónico configurado en `astro.config.mjs` (`https://www.grupdesuport.com`).
 2.  Decidir si va a ser **Static Site or SSR**, en el caso de ser SSR añadir el adaptador de cloudflare: https://docs.astro.build/es/guides/integrations-guide/cloudflare/
 3.  Determinar los colores en variables.scss
 4.  ` npm run update 	`

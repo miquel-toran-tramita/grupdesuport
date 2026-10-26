@@ -1,0 +1,28 @@
+---
+import ServiceLanding from '@/components/ServiceLanding.astro'
+import serviceContent, { serviceIcons, type ServiceSlug } from '@/data/services'
+
+export function getStaticPaths() {
+  return Object.entries(serviceContent.es).map(([slug, service]) => ({
+    params: { slug },
+    props: {
+      service,
+      relatedServices: Object.entries(serviceContent.es)
+        .filter(([relatedSlug]) => relatedSlug !== slug)
+        .map(([relatedSlug, relatedService]) => ({
+          slug: relatedSlug,
+          icon: serviceIcons[relatedSlug as ServiceSlug],
+          title: relatedService.title,
+        })),
+    },
+  }))
+}
+
+const { service, relatedServices } = Astro.props
+---
+
+<ServiceLanding
+  lang="es"
+  service={service}
+  relatedServices={relatedServices}
+/>

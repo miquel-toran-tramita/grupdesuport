@@ -18,7 +18,7 @@
       title: t('menuServices'),
     },
     {
-      href: '/nosotros',
+      href: lang === 'ca' ? '/ca/nosotros/' : '/nosotros/',
       title: t('menuTeam'),
     },
     {

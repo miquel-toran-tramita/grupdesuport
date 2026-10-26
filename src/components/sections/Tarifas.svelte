@@ -1,10 +1,6 @@
 <script lang="ts">
-  import Modal from '@/components/Modal.svelte'
-  import Button from '@/components/Button.svelte'
-  import ContactForm from '@/components/ContactForm.svelte'
+  import ContactFormTrigger from '@/components/ContactFormTrigger.svelte'
   import { useTranslations, languageList } from '@/i18n/ui'
-
-  export let closed: boolean = true
 
   export let lang: string
 
@@ -39,9 +35,6 @@
     }
   }
 
-  .modal-content {
-    padding: 20px;
-  }
 </style>
 
 <div class="tarifas" id="contacto">
@@ -51,7 +44,7 @@
       {@html t('pricesText')}
     </div>
 
-    <Button click={() => (closed = false)}>{t('pricesCTA')}</Button>
+    <ContactFormTrigger {lang} label={t('pricesCTA')} />
   </div>
 </div>
 
@@ -59,11 +52,3 @@
   <div class="title">GRUP DE SUPORT SCC</div>
   <div class="desc">LA COMPTABILITAT LLEUGERA</div>
 </div>
-
-<Modal bind:closed>
-  <div slot="modal-header">{t('contactFormTitle')}</div>
-
-  <div slot="modal-content" class="modal-content">
-    <ContactForm {lang} />
-  </div>
-</Modal>

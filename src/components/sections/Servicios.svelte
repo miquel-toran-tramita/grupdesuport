@@ -1,6 +1,13 @@
 <script lang="ts">
   import Svg from '@/components/Svg.svelte'
+  import ServiceCard from '@/components/ServiceCard.svelte'
   import { useTranslations, languageList } from '@/i18n/ui'
+
+  interface IServiceCard {
+    icon: string
+    title: string
+    slug: string
+  }
 
   interface ICard {
     icon: string
@@ -12,12 +19,12 @@
 
   const t = useTranslations(lang as keyof typeof languageList)
 
-  const servicios: ICard[] = [
-    { icon: 'money', title: t('servicesA') },
-    { icon: 'gear', title: t('servicesB') },
-    { icon: 'handshake', title: t('servicesC') },
-    { icon: 'balance', title: t('servicesD') },
-    { icon: 'receipt', title: t('servicesE') },
+  const servicios: IServiceCard[] = [
+    { icon: 'money', title: t('servicesA'), slug: 'facturacion-y-pagos' },
+    { icon: 'gear', title: t('servicesB'), slug: 'configuracion-y-asesoria' },
+    { icon: 'handshake', title: t('servicesC'), slug: 'conciliaciones-y-registros-contables' },
+    { icon: 'balance', title: t('servicesD'), slug: 'presentaciones-y-obligaciones-legales' },
+    { icon: 'receipt', title: t('servicesE'), slug: 'informes-y-estados-financieros' },
   ]
 
   const valores: ICard[] = [
@@ -73,26 +80,6 @@
       height: 100%;
       font-size: 40px;
       color: white;
-    }
-
-    .servicio {
-      background-color: white;
-      padding: 20px;
-      display: flex;
-      min-height: 230px;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0px;
-
-      .title {
-        font-size: 18px;
-        text-align: center;
-      }
-
-      .description {
-        font-size: 14px;
-      }
     }
 
     .valor {
@@ -160,11 +147,12 @@
     <p class="title-section">{t('servicesTitle')}</p>
   </div>
   {#each servicios as servicio}
-    <div class="servicio g-box">
-      <Svg name={servicio.icon} fill="var(--colorPrimary)" height="60" width="60" />
-      <div class="title">{servicio.title}</div>
-      <!--<div class="description">{servicio.description}</div>-->
-    </div>
+    <ServiceCard
+      icon={servicio.icon}
+      title={servicio.title}
+      href="{lang === 'ca' ? '/ca' : ''}/servicios/{servicio.slug}/"
+      linkLabel={t('serviceLearnMore')}
+    />
   {/each}
 </div>
 

@@ -7,25 +7,158 @@ import { defaultLang } from '@/i18n/ui'
 const lang = Astro.currentLocale || defaultLang
 export interface Props {
   title: string
+  description: string
+  faqs?: { title: string; content: string }[]
+  service?: { name: string; description: string }
   frozen?: boolean
 }
 
 const props = Astro.props
 const title = props.title
+const description = props.description
+const faqs = props.faqs ?? []
+const service = props.service
 const frozen = props.frozen
+const site = Astro.site
+
+if (!site) {
+  throw new Error('Astro.site must be configured to generate SEO metadata')
+}
+
+const pathname = `${Astro.url.pathname.replace(/\/+$/, '')}/`
+const spanishPathname = pathname.replace(/^\/ca(?=\/|$)/, '') || '/'
+const catalanPathname = `/ca${spanishPathname}`
+const canonicalUrl = new URL(pathname, site).href
+const spanishUrl = new URL(spanishPathname, site).href
+const catalanUrl = new URL(catalanPathname, site).href
+const socialImage = new URL('/assets/favicon.png', site).href
+const locale = lang === 'ca' ? 'ca_ES' : 'es_ES'
+const alternateLocale = lang === 'ca' ? 'es_ES' : 'ca_ES'
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AccountingService',
+      '@id': `${site.href}#business`,
+      name: 'GRUP DE SUPORT SCC',
+      description:
+        lang === 'ca'
+          ? 'Cooperativa de serveis comptables, fiscals i laborals per a empreses.'
+          : 'Cooperativa de servicios contables, fiscales y laborales para empresas.',
+      url: site.href,
+      image: socialImage,
+      logo: socialImage,
+      telephone: '+34650818572',
+      email: 'info@grupdesuport.com',
+      taxID: 'F66710930',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Apenins 42, 4.1, Esc. D',
+        addressLocality: 'Badalona',
+        postalCode: '08917',
+        addressRegion: 'Catalonia',
+        addressCountry: 'ES',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: '+34650818572',
+        email: 'info@grupdesuport.com',
+        availableLanguage: ['Spanish', 'Catalan'],
+      },
+      sameAs: [
+        'https://www.linkedin.com/in/grup-de-suport-scc-797501127/',
+        'https://www.facebook.com/grupdesuport/',
+        'https://x.com/grupdesup',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site.href}#website`,
+      url: site.href,
+      name: 'Grup de Suport',
+      inLanguage: ['es-ES', 'ca-ES'],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: title,
+      description,
+      inLanguage: lang === 'ca' ? 'ca-ES' : 'es-ES',
+      isPartOf: { '@id': `${site.href}#website` },
+      about: { '@id': `${site.href}#business` },
+    },
+    ...(service
+      ? [
+          {
+            '@type': 'Service',
+            '@id': `${canonicalUrl}#service`,
+            name: service.name,
+            description: service.description,
+            provider: { '@id': `${site.href}#business` },
+            areaServed: {
+              '@type': 'AdministrativeArea',
+              name: 'Badalona, Catalonia, Spain',
+            },
+          },
+        ]
+      : []),
+    ...(faqs.length
+      ? [
+          {
+            '@type': 'FAQPage',
+            '@id': `${canonicalUrl}#faq`,
+            mainEntity: faqs.map(({ title, content }) => ({
+              '@type': 'Question',
+              name: title,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: content,
+              },
+            })),
+          },
+        ]
+      : []),
+  ],
+}
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="La comptabilitat lleugera" />
+    <meta name="description" content={description} />
     <meta name="view-transition" content="same-origin" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="es-ES" href={spanishUrl} />
+    <link rel="alternate" hreflang="ca-ES" href={catalanUrl} />
+    <link rel="alternate" hreflang="x-default" href={spanishUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Grup de Suport" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta
+      property="og:image:alt"
+      content={lang === 'ca' ? 'Ploma, símbol de Grup de Suport' : 'Pluma, símbolo de Grup de Suport'}
+    />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:locale:alternate" content={alternateLocale} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')}
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
