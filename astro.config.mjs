@@ -14,6 +14,7 @@ export default defineConfig({
   integrations: [
     svelte(),
     sitemap({
+      xslURL: '/sitemap.xsl',
       i18n: {
         defaultLocale: 'es',
         locales: {
