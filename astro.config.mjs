@@ -11,7 +11,19 @@ const __dirname = dirname(__filename)
 export default defineConfig({
   site: 'https://www.grupdesuport.com',
   trailingSlash: 'always',
-  integrations: [svelte(), sitemap(), robots()],
+  integrations: [
+    svelte(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'es',
+        locales: {
+          es: 'es-ES',
+          ca: 'ca-ES',
+        },
+      },
+    }),
+    robots(),
+  ],
   output: 'static', // hybrid
   i18n: {
     defaultLocale: 'es',
