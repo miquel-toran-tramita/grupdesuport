@@ -9,7 +9,7 @@ const __dirname = dirname(__filename)
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.grupdesuport.com',
+  site: 'https://grupdesuport.com',
   trailingSlash: 'always',
   integrations: [
     svelte(),

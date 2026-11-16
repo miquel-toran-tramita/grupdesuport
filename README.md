@@ -4,12 +4,16 @@ Todo lo necesario para llevar a cabo un proyecto web de forma modular
 
 ### ⚙️ Tareas:
 
-1.  Dominio canónico configurado en `astro.config.mjs` (`https://www.grupdesuport.com`).
+1.  Dominio canónico configurado en `astro.config.mjs` (`https://grupdesuport.com`).
 2.  Decidir si va a ser **Static Site or SSR**, en el caso de ser SSR añadir el adaptador de cloudflare: https://docs.astro.build/es/guides/integrations-guide/cloudflare/
 3.  Determinar los colores en variables.scss
 4.  ` npm run update 	`
 5.  Layout.astro: Cambiar las fuentes (default: Poppins) & defaults.scss cambiar la font-family
 6.  Añadir logo a public/assets/favicon.svg
+
+### Dominio en Vercel
+
+Antes de desplegar esta configuración, en los ajustes de dominios del proyecto en Vercel hay que hacer que `grupdesuport.com` sirva el sitio sin redirección y que `www.grupdesuport.com` redirija de forma permanente (301 o 308) a `grupdesuport.com`, conservando las rutas. No deben existir redirecciones en sentido contrario, ya que producirían un bucle. Tras desplegar, comprobar ambos dominios y enviar `https://grupdesuport.com/sitemap-index.xml` a Search Console.
 
 ### 🧩 Plugins
 
